@@ -1,0 +1,65 @@
+@import "tailwindcss";
+
+@theme {
+  --color-cream: #fbf5e9;
+  --color-cream-dark: #f2e8d5;
+  --color-ink: #2b2620;
+  --color-amber: #b45309;
+  --color-amber-dark: #92400e;
+  --color-teal: #0f5b52;
+  --color-teal-dark: #0b423b;
+  --color-soft-amber: #fde8cf;
+  --color-soft-teal: #d9efe9;
+  --font-sans: "Atkinson Hyperlegible", "Segoe UI", system-ui, -apple-system, sans-serif;
+}
+
+html {
+  font-size: 100%;
+  color-scheme: light;
+}
+
+body {
+  margin: 0;
+  background-color: var(--color-cream);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  min-height: 100vh;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+/* High-contrast mode: pure black/white, thicker borders — for low vision */
+html.high-contrast body {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+html.high-contrast .surface {
+  background-color: #111111 !important;
+  border: 3px solid #ffffff !important;
+  color: #ffffff !important;
+}
+
+html.high-contrast .btn-primary {
+  background-color: #ffd166 !important;
+  color: #000000 !important;
+  border: 3px solid #ffffff !important;
+}
+
+* {
+  -webkit-tap-highlight-color: transparent;
+  box-sizing: border-box;
+}
+
+button {
+  cursor: pointer;
+  font-family: inherit;
+}
+
+button:focus-visible,
+a:focus-visible {
+  outline: 4px solid var(--color-amber-dark);
+  outline-offset: 3px;
+}
