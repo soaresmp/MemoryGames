@@ -1,5 +1,5 @@
 import { useTranslation } from 'react-i18next'
-import { BigButton } from '../components/ui'
+import { BigButton, LanguageSwitcher } from '../components/ui'
 import { useProfile } from '../lib/ProfileContext'
 import { DATE_LOCALE, type Language } from '../i18n'
 
@@ -16,6 +16,7 @@ export default function Home() {
 
   return (
     <div className="mx-auto min-h-screen max-w-3xl px-5 py-8">
+      <LanguageSwitcher />
       <header className="mb-8 text-center">
         <p className="text-2xl">
           {t(timeOfDayGreetingKey())}, {profile.name} 👋

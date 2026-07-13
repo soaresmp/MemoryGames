@@ -1,6 +1,35 @@
 import type { ReactNode } from 'react'
 import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
+import { SUPPORTED_LANGUAGES, LANGUAGE_FLAG, LANGUAGE_LABEL } from '../i18n'
+import { useProfile } from '../lib/ProfileContext'
+
+/**
+ * Always-visible, one-tap language row — deliberately icon-first (flag + native
+ * name) so it's discoverable without being able to read the app's current
+ * language. Lives at the very top of Home so it's the first thing anyone sees.
+ */
+export function LanguageSwitcher() {
+  const { profile, setProfile } = useProfile()
+  return (
+    <div className="mb-4 flex flex-wrap justify-center gap-2" role="group" aria-label="Language">
+      {SUPPORTED_LANGUAGES.map((language) => (
+        <button
+          key={language}
+          onClick={() => setProfile((p) => ({ ...p, language }))}
+          className={`flex items-center gap-1 rounded-full border-2 px-3 py-2 text-base font-semibold transition-colors ${
+            profile.language === language ? 'border-teal bg-teal text-white' : 'border-ink/20 bg-white/70 hover:bg-white'
+          }`}
+        >
+          <span className="text-xl" aria-hidden="true">
+            {LANGUAGE_FLAG[language]}
+          </span>
+          {LANGUAGE_LABEL[language]}
+        </button>
+      ))}
+    </div>
+  )
+}
 
 /** Large, high-contrast tappable card — the only interaction unit patient screens use. */
 export function BigButton({

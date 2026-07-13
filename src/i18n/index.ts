@@ -15,6 +15,14 @@ export const LANGUAGE_LABEL: Record<Language, string> = {
   fr: 'Français',
 }
 
+/** Recognizable without reading any language — the point of the on-Home switcher. */
+export const LANGUAGE_FLAG: Record<Language, string> = {
+  en: '🇺🇸',
+  'pt-BR': '🇧🇷',
+  es: '🇪🇸',
+  fr: '🇫🇷',
+}
+
 /** Locale tag used for Intl date formatting per language. */
 export const DATE_LOCALE: Record<Language, string> = {
   en: 'en-US',
