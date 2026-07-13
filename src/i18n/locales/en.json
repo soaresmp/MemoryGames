@@ -196,5 +196,86 @@
     "addButton": "Add person",
     "themesLabel": "Memory Lane topics",
     "themesDesc": "Choose which reminiscence topics appear in Memory Lane."
+  },
+  "checkin": {
+    "navTitle": "Cognitive Check-in",
+    "navSub": "For a doctor visit",
+    "introTitle": "Cognitive Check-in",
+    "disclaimerTitle": "This is not a medical diagnosis",
+    "disclaimerBody": "These informal activities are inspired by tasks doctors use (like the clock-drawing test), but they are not validated clinical tests and cannot diagnose dementia or determine its stage. Please share the summary with a doctor, who can decide on formal testing and next steps.",
+    "lastCheckin": "Last check-in: {{date}}",
+    "noCheckins": "No check-ins yet.",
+    "previousCheckins": "Previous check-ins",
+    "startButton": "Begin check-in",
+    "step": "Step {{current}} of {{total}}",
+    "wordShow": {
+      "title": "Remember these words",
+      "instructions": "Take a moment to remember these words. You'll be asked about them again after a couple of short tasks.",
+      "continueButton": "I've got them"
+    },
+    "attention": {
+      "title": "A quick counting task",
+      "prompt": "What is {{current}} minus {{step}}?"
+    },
+    "clock": {
+      "numbersInstructions": "Tap where each number belongs on the clock face, starting with 12.",
+      "handsInstructions": "Now drag the hands to show {{time}}.",
+      "doneButton": "Done",
+      "skipNumbers": "Skip the rest of the numbers",
+      "hourHand": "Hour hand",
+      "minuteHand": "Minute hand"
+    },
+    "wordRecall": {
+      "title": "What were those words?",
+      "instructions": "Type the words that come to mind — it's fine if not all of them do.",
+      "placeholder": "Type the words here...",
+      "continueButton": "Continue"
+    },
+    "caregiver": {
+      "title": "A few questions for the caregiver",
+      "instructions": "Answer based on changes you've noticed over the last several months.",
+      "yes": "Yes",
+      "no": "No",
+      "unsure": "Not sure",
+      "q1": "Managing money or bills seems harder than it used to be",
+      "q2": "Repeats questions or stories more than before",
+      "q3": "Gets confused about time or place more than before",
+      "q4": "Needs more help with dressing, bathing, or personal care",
+      "q5": "Has stopped or reduced hobbies they used to enjoy",
+      "q6": "Misplaces items or puts them in unusual places more often",
+      "continueButton": "See summary"
+    },
+    "words": {
+      "garden": "Garden",
+      "bicycle": "Bicycle",
+      "umbrella": "Umbrella",
+      "kitten": "Kitten",
+      "pencil": "Pencil",
+      "bridge": "Bridge",
+      "orange": "Orange",
+      "candle": "Candle"
+    },
+    "summary": {
+      "title": "Check-in summary",
+      "shareNote": "Share this summary with a doctor — it's a helpful starting point, not a diagnosis.",
+      "clockLabel": "Clock drawing",
+      "wordRecallLabel": "Word recall",
+      "attentionLabel": "Attention & calculation",
+      "caregiverLabel": "Caregiver observations",
+      "band": {
+        "none": "No difficulty observed",
+        "some": "Some difficulty observed",
+        "considerable": "Considerable difficulty observed"
+      },
+      "clockDetail": "Placed {{placed}} of 12 numbers in roughly the right spot; hands were {{hands}}.",
+      "handsAccurate": "set accurately",
+      "handsInaccurate": "not quite matching the requested time",
+      "wordRecallDetail": "Recalled {{recalled}} of {{total}} words after a short delay.",
+      "attentionDetail": "Answered {{correct}} of {{total}} correctly.",
+      "caregiverDetail": "{{count}} of {{total}} items flagged as noticeably changed.",
+      "doneButton": "Done",
+      "copyButton": "Copy summary",
+      "copied": "Copied to clipboard"
+    }
   }
 }

@@ -196,5 +196,86 @@
     "addButton": "Adicionar pessoa",
     "themesLabel": "Temas de Lembranças",
     "themesDesc": "Escolha quais temas de lembranças aparecem em Lembranças."
+  },
+  "checkin": {
+    "navTitle": "Check-in Cognitivo",
+    "navSub": "Para uma consulta médica",
+    "introTitle": "Check-in Cognitivo",
+    "disclaimerTitle": "Isto não é um diagnóstico médico",
+    "disclaimerBody": "Estas atividades informais são inspiradas em tarefas usadas por médicos (como o teste do desenho do relógio), mas não são testes clínicos validados e não podem diagnosticar demência nem determinar sua fase. Compartilhe o resumo com um médico, que poderá decidir sobre testes formais e os próximos passos.",
+    "lastCheckin": "Último check-in: {{date}}",
+    "noCheckins": "Nenhum check-in ainda.",
+    "previousCheckins": "Check-ins anteriores",
+    "startButton": "Iniciar check-in",
+    "step": "Passo {{current}} de {{total}}",
+    "wordShow": {
+      "title": "Lembre-se destas palavras",
+      "instructions": "Reserve um momento para lembrar destas palavras. Vamos perguntar sobre elas novamente depois de algumas tarefas curtas.",
+      "continueButton": "Já memorizei"
+    },
+    "attention": {
+      "title": "Uma tarefa rápida de cálculo",
+      "prompt": "Quanto é {{current}} menos {{step}}?"
+    },
+    "clock": {
+      "numbersInstructions": "Toque onde cada número deve ficar no relógio, começando pelo 12.",
+      "handsInstructions": "Agora arraste os ponteiros para mostrar {{time}}.",
+      "doneButton": "Concluído",
+      "skipNumbers": "Pular o restante dos números",
+      "hourHand": "Ponteiro das horas",
+      "minuteHand": "Ponteiro dos minutos"
+    },
+    "wordRecall": {
+      "title": "Quais eram aquelas palavras?",
+      "instructions": "Digite as palavras que vierem à mente — tudo bem se não forem todas.",
+      "placeholder": "Digite as palavras aqui...",
+      "continueButton": "Continuar"
+    },
+    "caregiver": {
+      "title": "Algumas perguntas para o cuidador",
+      "instructions": "Responda com base nas mudanças que você notou nos últimos meses.",
+      "yes": "Sim",
+      "no": "Não",
+      "unsure": "Não tenho certeza",
+      "q1": "Cuidar do dinheiro ou das contas parece mais difícil do que costumava ser",
+      "q2": "Repete perguntas ou histórias mais do que antes",
+      "q3": "Fica mais confuso(a) sobre a hora ou o lugar do que antes",
+      "q4": "Precisa de mais ajuda para se vestir, tomar banho ou cuidar da higiene pessoal",
+      "q5": "Parou ou reduziu passatempos que costumava gostar",
+      "q6": "Perde objetos de vista ou os coloca em lugares incomuns com mais frequência",
+      "continueButton": "Ver resumo"
+    },
+    "words": {
+      "garden": "Jardim",
+      "bicycle": "Bicicleta",
+      "umbrella": "Guarda-chuva",
+      "kitten": "Gatinho",
+      "pencil": "Lápis",
+      "bridge": "Ponte",
+      "orange": "Laranja",
+      "candle": "Vela"
+    },
+    "summary": {
+      "title": "Resumo do check-in",
+      "shareNote": "Compartilhe este resumo com um médico — é um bom ponto de partida, não um diagnóstico.",
+      "clockLabel": "Desenho do relógio",
+      "wordRecallLabel": "Lembrança de palavras",
+      "attentionLabel": "Atenção e cálculo",
+      "caregiverLabel": "Observações do cuidador",
+      "band": {
+        "none": "Nenhuma dificuldade observada",
+        "some": "Alguma dificuldade observada",
+        "considerable": "Dificuldade considerável observada"
+      },
+      "clockDetail": "Colocou {{placed}} de 12 números em posições aproximadamente corretas; os ponteiros foram {{hands}}.",
+      "handsAccurate": "ajustados corretamente",
+      "handsInaccurate": "não corresponderam exatamente ao horário pedido",
+      "wordRecallDetail": "Lembrou {{recalled}} de {{total}} palavras após um breve intervalo.",
+      "attentionDetail": "Respondeu {{correct}} de {{total}} corretamente.",
+      "caregiverDetail": "{{count}} de {{total}} itens sinalizados como mudanças perceptíveis.",
+      "doneButton": "Concluído",
+      "copyButton": "Copiar resumo",
+      "copied": "Copiado para a área de transferência"
+    }
   }
 }

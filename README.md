@@ -21,6 +21,7 @@ cognitive-rehabilitation literature, not a generic "brain game":
 | Stage toggle (Early / Middle) that scales item counts, choice counts, and pacing everywhere | Middle-stage dementia needs fewer decisions per screen and slower pacing than early-stage — difficulty is tied to **disease stage**, never framed as a "level" the person must earn. |
 | Personalized loved ones & reminiscence topics (caregiver-editable) | **Person-centered care** (Kitwood) — content that reflects the individual's real relationships and history drives engagement far more than generic stimuli. |
 | Progress page framed as "engagement," not test scores | Avoids the shame/anxiety response common when dementia patients are shown numeric failure; caregivers see streaks and activity, not grades. |
+| **Cognitive Check-in** (clock-setting, delayed word recall, attention task, caregiver questionnaire) | Inspired by the cognitive domains real screening tools assess — the **Clock Drawing Test** / Mini-Cog (visuospatial/executive function), **MMSE/MoCA**-style delayed recall and serial-subtraction attention tasks, and the caregiver-interview domains behind staging tools like the **GDS** and **CDR** — without reproducing any of those copyrighted instruments verbatim. Deliberately outputs *no numeric score or stage claim*, only banded plain-language observations ("no / some / considerable difficulty observed") explicitly framed as a doctor-visit conversation starter, never a diagnosis. |
 
 ## Exercises
 
@@ -30,6 +31,26 @@ cognitive-rehabilitation literature, not a generic "brain game":
 - **Sort It Out** — categorize everyday items (semantic memory + executive function).
 - **What Comes Next** — put the steps of a daily routine in order (procedural memory / ADL support).
 - **Memory Lane** — themed reminiscence prompts for a caregiver-assisted conversation.
+
+## Cognitive Check-in
+
+A separate, clearly-disclaimed section (not one of the daily practice exercises above) for an
+occasional, informal observation session ahead of a doctor's visit:
+
+1. **Word recall** — shown 3–4 simple words, asked to recall them later.
+2. **Attention task** — a short serial-subtraction sequence (multiple choice).
+3. **Clock-setting task** — an interactive SVG clock: place the numbers 1–12 (skipped at the
+   middle stage — numbers are pre-filled), then drag the hour/minute hands to a requested time.
+4. **Delayed word recall** — free-text entry, checked against the words shown in step 1.
+5. **Caregiver questionnaire** — six yes/no/not-sure questions about functional changes noticed
+   over recent months (managing money, repeating questions, personal care, hobbies, etc.).
+
+The result screen shows each domain's plain-language observation and band, a strong
+non-diagnostic disclaimer repeated top and bottom, and a "Copy summary" button so it can be
+pasted into an email or message ahead of an appointment. Every check-in is timestamped and
+kept (`profile.checkins`) so trends are visible across repeated check-ins over time. See
+`src/lib/checkin.ts` for the scoring/banding logic and `src/pages/checkin/ClockTask.tsx` for
+the interactive clock.
 
 ## Caregiver zone
 

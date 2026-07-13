@@ -45,6 +45,7 @@ export default function Home() {
 
       <div className="flex flex-col gap-3 border-t-2 border-ink/10 pt-6">
         <p className="text-center text-lg opacity-70">{t('home.forFamily')}</p>
+        <BigButton to="/checkin" emoji="🩺" label={t('checkin.navTitle')} sublabel={t('checkin.navSub')} />
         <div className="flex flex-col gap-3 sm:flex-row">
           <div className="flex-1">
             <BigButton to="/progress" emoji="📈" label={t('home.progressTitle')} sublabel={t('home.progressSub')} tone="teal" />

@@ -196,5 +196,86 @@
     "addButton": "Ajouter une personne",
     "themesLabel": "Thèmes de Souvenirs",
     "themesDesc": "Choisissez les thèmes de souvenirs qui apparaissent dans Souvenirs."
+  },
+  "checkin": {
+    "navTitle": "Bilan Cognitif",
+    "navSub": "Pour une consultation médicale",
+    "introTitle": "Bilan Cognitif",
+    "disclaimerTitle": "Ceci n'est pas un diagnostic médical",
+    "disclaimerBody": "Ces activités informelles s'inspirent de tâches utilisées par les médecins (comme le test de l'horloge), mais ce ne sont pas des tests cliniques validés et elles ne peuvent pas diagnostiquer une démence ni en déterminer le stade. Merci de partager ce résumé avec un médecin, qui pourra décider d'examens formels et des prochaines étapes.",
+    "lastCheckin": "Dernier bilan : {{date}}",
+    "noCheckins": "Aucun bilan pour le moment.",
+    "previousCheckins": "Bilans précédents",
+    "startButton": "Commencer le bilan",
+    "step": "Étape {{current}} sur {{total}}",
+    "wordShow": {
+      "title": "Retenez ces mots",
+      "instructions": "Prenez un moment pour retenir ces mots. On vous les redemandera après quelques courtes tâches.",
+      "continueButton": "Je les ai retenus"
+    },
+    "attention": {
+      "title": "Un petit calcul",
+      "prompt": "Combien font {{current}} moins {{step}} ?"
+    },
+    "clock": {
+      "numbersInstructions": "Touchez l'endroit où va chaque chiffre sur le cadran, en commençant par le 12.",
+      "handsInstructions": "Faites glisser les aiguilles pour afficher {{time}}.",
+      "doneButton": "Terminé",
+      "skipNumbers": "Passer le reste des chiffres",
+      "hourHand": "Petite aiguille (heures)",
+      "minuteHand": "Grande aiguille (minutes)"
+    },
+    "wordRecall": {
+      "title": "Quels étaient ces mots ?",
+      "instructions": "Tapez les mots qui vous reviennent — ce n'est pas grave si ce n'est pas tous.",
+      "placeholder": "Tapez les mots ici...",
+      "continueButton": "Continuer"
+    },
+    "caregiver": {
+      "title": "Quelques questions pour l'aidant",
+      "instructions": "Répondez en fonction des changements observés au cours des derniers mois.",
+      "yes": "Oui",
+      "no": "Non",
+      "unsure": "Pas sûr(e)",
+      "q1": "Gérer l'argent ou les factures semble plus difficile qu'avant",
+      "q2": "Répète des questions ou des histoires plus qu'avant",
+      "q3": "Se trouve plus souvent confus(e) sur l'heure ou le lieu qu'avant",
+      "q4": "A besoin de plus d'aide pour s'habiller, se laver ou les soins personnels",
+      "q5": "A arrêté ou réduit des loisirs qu'il/elle appréciait",
+      "q6": "Égare des objets ou les range dans des endroits inhabituels plus souvent",
+      "continueButton": "Voir le résumé"
+    },
+    "words": {
+      "garden": "Jardin",
+      "bicycle": "Vélo",
+      "umbrella": "Parapluie",
+      "kitten": "Chaton",
+      "pencil": "Crayon",
+      "bridge": "Pont",
+      "orange": "Orange",
+      "candle": "Bougie"
+    },
+    "summary": {
+      "title": "Résumé du bilan",
+      "shareNote": "Partagez ce résumé avec un médecin — c'est un bon point de départ, pas un diagnostic.",
+      "clockLabel": "Dessin de l'horloge",
+      "wordRecallLabel": "Rappel de mots",
+      "attentionLabel": "Attention et calcul",
+      "caregiverLabel": "Observations de l'aidant",
+      "band": {
+        "none": "Aucune difficulté observée",
+        "some": "Quelques difficultés observées",
+        "considerable": "Difficultés importantes observées"
+      },
+      "clockDetail": "A placé {{placed}} chiffres sur 12 à peu près au bon endroit ; les aiguilles étaient {{hands}}.",
+      "handsAccurate": "réglées correctement",
+      "handsInaccurate": "pas tout à fait à l'heure demandée",
+      "wordRecallDetail": "A retrouvé {{recalled}} mots sur {{total}} après un court délai.",
+      "attentionDetail": "A répondu correctement à {{correct}} question(s) sur {{total}}.",
+      "caregiverDetail": "{{count}} élément(s) sur {{total}} signalé(s) comme ayant changé de façon notable.",
+      "doneButton": "Terminé",
+      "copyButton": "Copier le résumé",
+      "copied": "Copié dans le presse-papiers"
+    }
   }
 }

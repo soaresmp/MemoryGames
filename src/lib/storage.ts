@@ -24,7 +24,12 @@ function defaultProfile(): PatientProfile {
     streakDays: 0,
     lastActiveDate: null,
     caregiverNotes: [],
+    checkins: [],
   }
+}
+
+export function saveCheckin(profile: PatientProfile, record: PatientProfile['checkins'][number]): PatientProfile {
+  return { ...profile, checkins: [...profile.checkins, record].slice(-50) }
 }
 
 export function loadProfile(): PatientProfile {

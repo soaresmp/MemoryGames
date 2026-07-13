@@ -9,6 +9,7 @@ import RoutineSequenceExercise from './pages/exercises/RoutineSequenceExercise'
 import Reminiscence from './pages/Reminiscence'
 import Progress from './pages/Progress'
 import CaregiverSettings from './pages/CaregiverSettings'
+import Checkin from './pages/Checkin'
 
 export default function App() {
   return (
@@ -24,6 +25,7 @@ export default function App() {
       <Route path="/reminisce" element={<Reminiscence />} />
       <Route path="/progress" element={<Progress />} />
       <Route path="/settings" element={<CaregiverSettings />} />
+      <Route path="/checkin" element={<Checkin />} />
     </Routes>
   )
 }

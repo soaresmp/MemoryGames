@@ -14,6 +14,13 @@ export interface StageConfig {
   orientation: { questionCount: number; choiceCount: number; hintDelayMs: number }
   faceName: { hintDelayMs: number }
   reminiscence: { promptCount: number }
+  checkin: {
+    wordCount: number
+    attentionStart: number
+    attentionStep: number
+    attentionSteps: number
+    clockShowsNumbers: boolean
+  }
 }
 
 export const STAGE_CONFIG: Record<Stage, StageConfig> = {
@@ -24,6 +31,7 @@ export const STAGE_CONFIG: Record<Stage, StageConfig> = {
     orientation: { questionCount: 4, choiceCount: 3, hintDelayMs: 6000 },
     faceName: { hintDelayMs: 5000 },
     reminiscence: { promptCount: 3 },
+    checkin: { wordCount: 4, attentionStart: 20, attentionStep: 3, attentionSteps: 4, clockShowsNumbers: false },
   },
   medium: {
     matchPairs: { pairCount: 4, revealMs: 1700, columns: 3 },
@@ -32,5 +40,6 @@ export const STAGE_CONFIG: Record<Stage, StageConfig> = {
     orientation: { questionCount: 3, choiceCount: 2, hintDelayMs: 3000 },
     faceName: { hintDelayMs: 2500 },
     reminiscence: { promptCount: 2 },
+    checkin: { wordCount: 3, attentionStart: 10, attentionStep: 2, attentionSteps: 3, clockShowsNumbers: true },
   },
 }

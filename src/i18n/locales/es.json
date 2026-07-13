@@ -196,5 +196,86 @@
     "addButton": "Añadir persona",
     "themesLabel": "Temas de Recuerdos",
     "themesDesc": "Elige qué temas de recuerdos aparecen en Recuerdos."
+  },
+  "checkin": {
+    "navTitle": "Chequeo Cognitivo",
+    "navSub": "Para una consulta médica",
+    "introTitle": "Chequeo Cognitivo",
+    "disclaimerTitle": "Esto no es un diagnóstico médico",
+    "disclaimerBody": "Estas actividades informales están inspiradas en tareas que usan los médicos (como la prueba del dibujo del reloj), pero no son pruebas clínicas validadas y no pueden diagnosticar la demencia ni determinar su etapa. Comparte el resumen con un médico, quien podrá decidir sobre pruebas formales y los próximos pasos.",
+    "lastCheckin": "Último chequeo: {{date}}",
+    "noCheckins": "Aún no hay chequeos.",
+    "previousCheckins": "Chequeos anteriores",
+    "startButton": "Comenzar chequeo",
+    "step": "Paso {{current}} de {{total}}",
+    "wordShow": {
+      "title": "Recuerda estas palabras",
+      "instructions": "Tómate un momento para recordar estas palabras. Te preguntaremos por ellas de nuevo después de un par de tareas breves.",
+      "continueButton": "Ya las recuerdo"
+    },
+    "attention": {
+      "title": "Una tarea rápida de cálculo",
+      "prompt": "¿Cuánto es {{current}} menos {{step}}?"
+    },
+    "clock": {
+      "numbersInstructions": "Toca dónde va cada número en la esfera del reloj, empezando por el 12.",
+      "handsInstructions": "Ahora arrastra las manecillas para mostrar las {{time}}.",
+      "doneButton": "Listo",
+      "skipNumbers": "Omitir el resto de los números",
+      "hourHand": "Manecilla de la hora",
+      "minuteHand": "Manecilla de los minutos"
+    },
+    "wordRecall": {
+      "title": "¿Cuáles eran esas palabras?",
+      "instructions": "Escribe las palabras que recuerdes — no pasa nada si no son todas.",
+      "placeholder": "Escribe las palabras aquí...",
+      "continueButton": "Continuar"
+    },
+    "caregiver": {
+      "title": "Algunas preguntas para el cuidador",
+      "instructions": "Responde según los cambios que hayas notado en los últimos meses.",
+      "yes": "Sí",
+      "no": "No",
+      "unsure": "No estoy seguro/a",
+      "q1": "Manejar el dinero o las facturas parece más difícil que antes",
+      "q2": "Repite preguntas o historias más que antes",
+      "q3": "Se confunde más que antes sobre la hora o el lugar",
+      "q4": "Necesita más ayuda para vestirse, bañarse o el cuidado personal",
+      "q5": "Ha dejado o reducido pasatiempos que solía disfrutar",
+      "q6": "Pierde objetos o los coloca en lugares inusuales con más frecuencia",
+      "continueButton": "Ver resumen"
+    },
+    "words": {
+      "garden": "Jardín",
+      "bicycle": "Bicicleta",
+      "umbrella": "Paraguas",
+      "kitten": "Gatito",
+      "pencil": "Lápiz",
+      "bridge": "Puente",
+      "orange": "Naranja",
+      "candle": "Vela"
+    },
+    "summary": {
+      "title": "Resumen del chequeo",
+      "shareNote": "Comparte este resumen con un médico — es un buen punto de partida, no un diagnóstico.",
+      "clockLabel": "Dibujo del reloj",
+      "wordRecallLabel": "Recuerdo de palabras",
+      "attentionLabel": "Atención y cálculo",
+      "caregiverLabel": "Observaciones del cuidador",
+      "band": {
+        "none": "No se observaron dificultades",
+        "some": "Se observaron algunas dificultades",
+        "considerable": "Se observaron dificultades considerables"
+      },
+      "clockDetail": "Colocó {{placed}} de 12 números en posiciones aproximadamente correctas; las manecillas quedaron {{hands}}.",
+      "handsAccurate": "ajustadas correctamente",
+      "handsInaccurate": "sin coincidir exactamente con la hora solicitada",
+      "wordRecallDetail": "Recordó {{recalled}} de {{total}} palabras tras una breve pausa.",
+      "attentionDetail": "Respondió correctamente {{correct}} de {{total}}.",
+      "caregiverDetail": "{{count}} de {{total}} elementos marcados como cambios notables.",
+      "doneButton": "Listo",
+      "copyButton": "Copiar resumen",
+      "copied": "Copiado al portapapeles"
+    }
   }
 }
