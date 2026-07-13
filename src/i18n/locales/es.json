@@ -51,7 +51,15 @@
     "sortTitle": "Ordénalo",
     "sortSub": "Agrupa las cosas que van juntas",
     "routineTitle": "Qué Viene Después",
-    "routineSub": "Pon los pasos en orden"
+    "routineSub": "Pon los pasos en orden",
+    "patternRepeatTitle": "Repite el Patrón",
+    "patternRepeatSub": "Observa y repítelo",
+    "namingTitle": "Cómo se Llama",
+    "namingSub": "¿Cómo se llama esto?",
+    "oddOneOutTitle": "El Diferente",
+    "oddOneOutSub": "¿Cuál no pertenece al grupo?",
+    "triviaTitle": "Recuerdos del Pasado",
+    "triviaSub": "Preguntas divertidas de otros tiempos"
   },
   "orientation": {
     "pageTitle": "Dónde y Cuándo",
@@ -175,7 +183,11 @@
       "matchPairs": "Juego de Memoria",
       "categorySort": "Ordénalo",
       "routineSequence": "Qué Viene Después",
-      "reminiscence": "Recuerdos"
+      "reminiscence": "Recuerdos",
+      "patternRepeat": "Repite el Patrón",
+      "naming": "Cómo se Llama",
+      "oddOneOut": "El Diferente",
+      "trivia": "Recuerdos del Pasado"
     }
   },
   "settings": {
@@ -276,6 +288,70 @@
       "doneButton": "Listo",
       "copyButton": "Copiar resumen",
       "copied": "Copiado al portapapeles"
+    }
+  },
+  "patternRepeat": {
+    "pageTitle": "Repite el Patrón",
+    "watchPrompt": "Observa el patrón...",
+    "repeatPrompt": "¡Ahora repítelo!"
+  },
+  "naming": {
+    "pageTitle": "Cómo se Llama",
+    "prompt": "¿Cómo se llama esto?",
+    "item": {
+      "sun": "Sol",
+      "moon": "Luna",
+      "star": "Estrella",
+      "tree": "Árbol",
+      "house": "Casa",
+      "car": "Coche",
+      "chair": "Silla",
+      "shoe": "Zapato",
+      "hat": "Sombrero",
+      "book": "Libro",
+      "telephone": "Teléfono",
+      "clock": "Reloj"
+    }
+  },
+  "oddOneOut": {
+    "pageTitle": "El Diferente",
+    "prompt": "¿Cuál no pertenece al grupo?"
+  },
+  "trivia": {
+    "pageTitle": "Recuerdos del Pasado",
+    "questions": {
+      "q1": {
+        "prompt": "Antes de los teléfonos inteligentes, ¿qué solía usar la gente para tomar fotografías?",
+        "options": ["Una cámara de fotos", "Una tableta", "Un reloj inteligente"]
+      },
+      "q2": {
+        "prompt": "¿Alrededor de qué se reunían muchas familias para escuchar música o las noticias antiguamente?",
+        "options": ["Una radio", "Un portátil", "Una videoconsola"]
+      },
+      "q3": {
+        "prompt": "Antes del streaming, ¿cómo solía escuchar la gente su música favorita en casa?",
+        "options": ["Un tocadiscos", "Un asistente de voz", "Unos auriculares inalámbricos"]
+      },
+      "q4": {
+        "prompt": "¿Cómo enviaba la mayoría de la gente un mensaje a alguien lejano, antiguamente?",
+        "options": ["Una carta escrita a mano", "Un mensaje de texto", "Una videollamada"]
+      },
+      "q5": {
+        "prompt": "Antes de los teléfonos móviles, ¿cómo hacía la gente una llamada fuera de casa?",
+        "options": ["Una cabina telefónica pública", "Un altavoz inteligente", "Una aplicación de videollamada"]
+      },
+      "q6": {
+        "prompt": "¿Qué solía usar la gente para mantener la comida fría antes de que los refrigeradores eléctricos fueran comunes?",
+        "options": ["Una nevera de hielo", "Un microondas", "Un cajón congelador"]
+      },
+      "q7": {
+        "prompt": "¿Cómo solía ver la gente sus programas favoritos antiguamente?",
+        "options": ["Una televisión en blanco y negro", "Una tableta", "Un teléfono inteligente"]
+      },
+      "q8": {
+        "prompt": "¿Qué solía usar la gente para moverse por la ciudad antes de que los coches fueran comunes?",
+        "options": ["Un carruaje de caballos", "Un patinete eléctrico", "Un coche de aplicación"]
+      }
     }
   }
 }

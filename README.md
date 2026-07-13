@@ -21,6 +21,10 @@ cognitive-rehabilitation literature, not a generic "brain game":
 | Stage toggle (Early / Middle) that scales item counts, choice counts, and pacing everywhere | Middle-stage dementia needs fewer decisions per screen and slower pacing than early-stage — difficulty is tied to **disease stage**, never framed as a "level" the person must earn. |
 | Personalized loved ones & reminiscence topics (caregiver-editable) | **Person-centered care** (Kitwood) — content that reflects the individual's real relationships and history drives engagement far more than generic stimuli. |
 | Progress page framed as "engagement," not test scores | Avoids the shame/anxiety response common when dementia patients are shown numeric failure; caregivers see streaks and activity, not grades. |
+| **Pattern Repeat** (watch a sequence, tap it back) | Sequential-recall span tasks are a standard working-memory / sustained-attention format in cognitive stimulation programs; color **and** symbol coding on every pad (not color alone) follows accessible-design practice for users with low vision or color-vision deficiency. |
+| **Name This** (picture naming) | Confrontation naming is one of the earliest and most closely tracked language changes in dementia (assessed in essentially every clinical cognitive battery); practicing it in a low-pressure, errorless format supports language function without the stakes of a test. |
+| **Odd One Out** | A single-decision-per-screen variant of semantic categorization — gentler than sorting a full set (as in *Sort It Out*) while still exercising the same categorical-reasoning skill. |
+| **Blast From the Past** (nostalgia trivia) | Leverages the **reminiscence bump** — autobiographical memories from adolescence/early adulthood stay disproportionately accessible in dementia — with always-gettable, positively-framed multiple-choice questions about pre-digital daily life, as a lighter-touch counterpart to *Memory Lane*'s open-ended prompts. |
 | **Cognitive Check-in** (clock-setting, delayed word recall, attention task, caregiver questionnaire) | Inspired by the cognitive domains real screening tools assess — the **Clock Drawing Test** / Mini-Cog (visuospatial/executive function), **MMSE/MoCA**-style delayed recall and serial-subtraction attention tasks, and the caregiver-interview domains behind staging tools like the **GDS** and **CDR** — without reproducing any of those copyrighted instruments verbatim. Deliberately outputs *no numeric score or stage claim*, only banded plain-language observations ("no / some / considerable difficulty observed") explicitly framed as a doctor-visit conversation starter, never a diagnosis. |
 
 ## Exercises
@@ -30,6 +34,10 @@ cognitive-rehabilitation literature, not a generic "brain game":
 - **Matching Pairs** — a brief full reveal, then a simplified concentration game (stage-scaled pair count).
 - **Sort It Out** — categorize everyday items (semantic memory + executive function).
 - **What Comes Next** — put the steps of a daily routine in order (procedural memory / ADL support).
+- **Pattern Repeat** — watch a short color-and-symbol sequence, then tap it back (working memory / attention).
+- **Name This** — picture-naming task with multiple-choice answers (language / confrontation naming).
+- **Odd One Out** — one wrong-category item among four; tap the one that doesn't belong (categorical reasoning).
+- **Blast From the Past** — always-answerable nostalgia trivia about pre-digital daily life (reminiscence bump).
 - **Memory Lane** — themed reminiscence prompts for a caregiver-assisted conversation.
 
 ## Cognitive Check-in
@@ -84,7 +92,7 @@ npm run build      # production build to dist/
 - `src/lib/storage.ts` — `localStorage`-backed profile persistence.
 - `src/lib/spacedRetrieval.ts` — expanding-interval scheduling for *Faces I Know*.
 - `src/lib/difficulty.ts` — per-stage difficulty table consumed by every exercise.
-- `src/pages/exercises/*` — the five exercises; `src/pages/Reminiscence.tsx` and the caregiver
+- `src/pages/exercises/*` — the nine exercises; `src/pages/Reminiscence.tsx` and the caregiver
   pages (`Progress.tsx`, `CaregiverSettings.tsx`) round out the app.
 - `src/i18n/` — `i18next` config plus `locales/{en,pt-BR,es,fr}.json`. All exercise content
   (categories, routine steps, reminiscence themes) is keyed, not hardcoded English, so it

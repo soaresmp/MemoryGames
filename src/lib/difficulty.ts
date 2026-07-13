@@ -21,6 +21,10 @@ export interface StageConfig {
     attentionSteps: number
     clockShowsNumbers: boolean
   }
+  patternRepeat: { rounds: number; minLength: number; maxLength: number; showMs: number }
+  naming: { itemCount: number; choiceCount: number }
+  oddOneOut: { trialCount: number }
+  trivia: { questionCount: number; choiceCount: number }
 }
 
 export const STAGE_CONFIG: Record<Stage, StageConfig> = {
@@ -32,6 +36,10 @@ export const STAGE_CONFIG: Record<Stage, StageConfig> = {
     faceName: { hintDelayMs: 5000 },
     reminiscence: { promptCount: 3 },
     checkin: { wordCount: 4, attentionStart: 20, attentionStep: 3, attentionSteps: 4, clockShowsNumbers: false },
+    patternRepeat: { rounds: 4, minLength: 2, maxLength: 5, showMs: 650 },
+    naming: { itemCount: 6, choiceCount: 3 },
+    oddOneOut: { trialCount: 5 },
+    trivia: { questionCount: 5, choiceCount: 3 },
   },
   medium: {
     matchPairs: { pairCount: 4, revealMs: 1700, columns: 3 },
@@ -41,5 +49,9 @@ export const STAGE_CONFIG: Record<Stage, StageConfig> = {
     faceName: { hintDelayMs: 2500 },
     reminiscence: { promptCount: 2 },
     checkin: { wordCount: 3, attentionStart: 10, attentionStep: 2, attentionSteps: 3, clockShowsNumbers: true },
+    patternRepeat: { rounds: 3, minLength: 2, maxLength: 3, showMs: 900 },
+    naming: { itemCount: 4, choiceCount: 2 },
+    oddOneOut: { trialCount: 3 },
+    trivia: { questionCount: 3, choiceCount: 2 },
   },
 }

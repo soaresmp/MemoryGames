@@ -65,7 +65,7 @@ export default function RoutineSequenceExercise() {
               ))}
             </ol>
           </div>
-          <SessionComplete nextTo={{ to: '/reminisce', label: t('home.reminisceTitle') }} />
+          <SessionComplete nextTo={{ to: '/exercises/pattern', label: t('exerciseHub.patternRepeatTitle') }} />
         </div>
       ) : (
         <>

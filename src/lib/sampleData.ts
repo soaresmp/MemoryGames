@@ -72,3 +72,38 @@ export const REMINISCENCE_PROMPTS: ReminiscencePrompt[] = [
 ]
 
 export const MATCH_PAIR_EMOJIS = ['🌻', '🐝', '🍀', '🌈', '⭐', '🍎', '🎈', '🌙', '☀️', '🦋', '🐟', '🍓']
+
+export interface NamingItem {
+  itemKey: string
+  emoji: string
+}
+
+export const NAMING_ITEMS: NamingItem[] = [
+  { itemKey: 'sun', emoji: '☀️' },
+  { itemKey: 'moon', emoji: '🌙' },
+  { itemKey: 'star', emoji: '⭐' },
+  { itemKey: 'tree', emoji: '🌳' },
+  { itemKey: 'house', emoji: '🏠' },
+  { itemKey: 'car', emoji: '🚗' },
+  { itemKey: 'chair', emoji: '🪑' },
+  { itemKey: 'shoe', emoji: '👞' },
+  { itemKey: 'hat', emoji: '🎩' },
+  { itemKey: 'book', emoji: '📖' },
+  { itemKey: 'telephone', emoji: '☎️' },
+  { itemKey: 'clock', emoji: '🕐' },
+]
+
+/** Translation keys only — prompt/options text lives in trivia.questions.<key> per locale. */
+export const TRIVIA_QUESTION_KEYS = ['q1', 'q2', 'q3', 'q4', 'q5', 'q6', 'q7', 'q8']
+
+export interface PatternPad {
+  key: string
+  emoji: string
+}
+
+export const PATTERN_PADS: PatternPad[] = [
+  { key: 'sun', emoji: '☀️' },
+  { key: 'clover', emoji: '🍀' },
+  { key: 'blossom', emoji: '🌸' },
+  { key: 'star', emoji: '⭐' },
+]

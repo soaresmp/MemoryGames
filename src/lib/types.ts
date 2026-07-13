@@ -9,6 +9,10 @@ export type ExerciseId =
   | 'categorySort'
   | 'routineSequence'
   | 'reminiscence'
+  | 'patternRepeat'
+  | 'naming'
+  | 'oddOneOut'
+  | 'trivia'
 
 export interface LovedOne {
   id: string

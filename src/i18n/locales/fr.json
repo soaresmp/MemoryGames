@@ -51,7 +51,15 @@
     "sortTitle": "Trier",
     "sortSub": "Regroupez ce qui va ensemble",
     "routineTitle": "Et Après ?",
-    "routineSub": "Remettez les étapes dans l'ordre"
+    "routineSub": "Remettez les étapes dans l'ordre",
+    "patternRepeatTitle": "Répétez le Motif",
+    "patternRepeatSub": "Regardez, puis répétez",
+    "namingTitle": "Comment Ça S'appelle",
+    "namingSub": "Comment ça s'appelle ?",
+    "oddOneOutTitle": "L'Intrus",
+    "oddOneOutSub": "Lequel ne va pas avec les autres ?",
+    "triviaTitle": "Souvenirs d'Autrefois",
+    "triviaSub": "Des questions amusantes du bon vieux temps"
   },
   "orientation": {
     "pageTitle": "Où & Quand",
@@ -175,7 +183,11 @@
       "matchPairs": "Jeu de Paires",
       "categorySort": "Trier",
       "routineSequence": "Et Après ?",
-      "reminiscence": "Souvenirs"
+      "reminiscence": "Souvenirs",
+      "patternRepeat": "Répétez le Motif",
+      "naming": "Comment Ça S'appelle",
+      "oddOneOut": "L'Intrus",
+      "trivia": "Souvenirs d'Autrefois"
     }
   },
   "settings": {
@@ -276,6 +288,70 @@
       "doneButton": "Terminé",
       "copyButton": "Copier le résumé",
       "copied": "Copié dans le presse-papiers"
+    }
+  },
+  "patternRepeat": {
+    "pageTitle": "Répétez le Motif",
+    "watchPrompt": "Regardez le motif...",
+    "repeatPrompt": "Maintenant, répétez-le !"
+  },
+  "naming": {
+    "pageTitle": "Comment Ça S'appelle",
+    "prompt": "Comment s'appelle ceci ?",
+    "item": {
+      "sun": "Soleil",
+      "moon": "Lune",
+      "star": "Étoile",
+      "tree": "Arbre",
+      "house": "Maison",
+      "car": "Voiture",
+      "chair": "Chaise",
+      "shoe": "Chaussure",
+      "hat": "Chapeau",
+      "book": "Livre",
+      "telephone": "Téléphone",
+      "clock": "Horloge"
+    }
+  },
+  "oddOneOut": {
+    "pageTitle": "L'Intrus",
+    "prompt": "Lequel ne va pas avec les autres ?"
+  },
+  "trivia": {
+    "pageTitle": "Souvenirs d'Autrefois",
+    "questions": {
+      "q1": {
+        "prompt": "Avant les smartphones, qu'utilisait-on souvent pour prendre des photos ?",
+        "options": ["Un appareil photo argentique", "Une tablette", "Une montre connectée"]
+      },
+      "q2": {
+        "prompt": "Autour de quoi de nombreuses familles se réunissaient-elles autrefois pour écouter de la musique ou les informations ?",
+        "options": ["Une radio", "Un ordinateur portable", "Une console de jeux"]
+      },
+      "q3": {
+        "prompt": "Avant le streaming, comment écoutait-on habituellement sa musique préférée à la maison ?",
+        "options": ["Un tourne-disque", "Un assistant vocal", "Des écouteurs sans fil"]
+      },
+      "q4": {
+        "prompt": "Comment la plupart des gens envoyaient-ils un message à quelqu'un de loin, autrefois ?",
+        "options": ["Une lettre écrite à la main", "Un texto", "Un appel vidéo"]
+      },
+      "q5": {
+        "prompt": "Avant les téléphones portables, comment appelait-on quelqu'un en dehors de chez soi ?",
+        "options": ["Une cabine téléphonique publique", "Une enceinte connectée", "Une application d'appel vidéo"]
+      },
+      "q6": {
+        "prompt": "Qu'utilisait-on souvent pour garder les aliments au frais avant que les réfrigérateurs électriques soient courants ?",
+        "options": ["Une glacière", "Un four à micro-ondes", "Un tiroir congélateur"]
+      },
+      "q7": {
+        "prompt": "Comment regardait-on habituellement ses émissions préférées autrefois ?",
+        "options": ["Une télévision en noir et blanc", "Une tablette", "Un smartphone"]
+      },
+      "q8": {
+        "prompt": "Qu'utilisait-on souvent pour se déplacer en ville avant que les voitures soient courantes ?",
+        "options": ["Une calèche", "Une trottinette électrique", "Une voiture de VTC"]
+      }
     }
   }
 }

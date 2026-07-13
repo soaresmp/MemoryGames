@@ -51,7 +51,15 @@
     "sortTitle": "Sort It Out",
     "sortSub": "Group things that go together",
     "routineTitle": "What Comes Next",
-    "routineSub": "Put the steps in order"
+    "routineSub": "Put the steps in order",
+    "patternRepeatTitle": "Pattern Repeat",
+    "patternRepeatSub": "Watch, then repeat it back",
+    "namingTitle": "Name This",
+    "namingSub": "What is it called?",
+    "oddOneOutTitle": "Odd One Out",
+    "oddOneOutSub": "Which one doesn't belong?",
+    "triviaTitle": "Blast From the Past",
+    "triviaSub": "Fun questions from days gone by"
   },
   "orientation": {
     "pageTitle": "Where & When",
@@ -175,7 +183,11 @@
       "matchPairs": "Matching Pairs",
       "categorySort": "Sort It Out",
       "routineSequence": "What Comes Next",
-      "reminiscence": "Memory Lane"
+      "reminiscence": "Memory Lane",
+      "patternRepeat": "Pattern Repeat",
+      "naming": "Name This",
+      "oddOneOut": "Odd One Out",
+      "trivia": "Blast From the Past"
     }
   },
   "settings": {
@@ -276,6 +288,70 @@
       "doneButton": "Done",
       "copyButton": "Copy summary",
       "copied": "Copied to clipboard"
+    }
+  },
+  "patternRepeat": {
+    "pageTitle": "Pattern Repeat",
+    "watchPrompt": "Watch the pattern...",
+    "repeatPrompt": "Now repeat it back!"
+  },
+  "naming": {
+    "pageTitle": "Name This",
+    "prompt": "What is this called?",
+    "item": {
+      "sun": "Sun",
+      "moon": "Moon",
+      "star": "Star",
+      "tree": "Tree",
+      "house": "House",
+      "car": "Car",
+      "chair": "Chair",
+      "shoe": "Shoe",
+      "hat": "Hat",
+      "book": "Book",
+      "telephone": "Telephone",
+      "clock": "Clock"
+    }
+  },
+  "oddOneOut": {
+    "pageTitle": "Odd One Out",
+    "prompt": "Which one doesn't belong?"
+  },
+  "trivia": {
+    "pageTitle": "Blast From the Past",
+    "questions": {
+      "q1": {
+        "prompt": "Before smartphones, what did people often use to take photographs?",
+        "options": ["A film camera", "A tablet", "A smartwatch"]
+      },
+      "q2": {
+        "prompt": "What did many families gather around to listen to music or the news long ago?",
+        "options": ["A radio", "A laptop", "A gaming console"]
+      },
+      "q3": {
+        "prompt": "Before streaming, how did people usually listen to their favorite music at home?",
+        "options": ["A record player", "A voice assistant", "A wireless earbud"]
+      },
+      "q4": {
+        "prompt": "How did most people send a message to someone far away, long ago?",
+        "options": ["A handwritten letter", "A text message", "A video call"]
+      },
+      "q5": {
+        "prompt": "Before mobile phones, how did people make a call away from home?",
+        "options": ["A public payphone", "A smart speaker", "A video chat app"]
+      },
+      "q6": {
+        "prompt": "What did people often use to keep food cool before electric refrigerators were common?",
+        "options": ["An icebox", "A microwave", "A freezer drawer"]
+      },
+      "q7": {
+        "prompt": "How did people usually watch their favorite shows long ago?",
+        "options": ["A black-and-white television", "A tablet", "A smartphone"]
+      },
+      "q8": {
+        "prompt": "What did people often ride to get around town before cars were common?",
+        "options": ["A horse and carriage", "An electric scooter", "A rideshare car"]
+      }
     }
   }
 }

@@ -39,6 +39,32 @@ export default function ExerciseHub() {
           label={t('exerciseHub.routineTitle')}
           sublabel={t('exerciseHub.routineSub')}
         />
+        <BigButton
+          to="/exercises/pattern"
+          emoji="🔵"
+          label={t('exerciseHub.patternRepeatTitle')}
+          sublabel={t('exerciseHub.patternRepeatSub')}
+          tone="teal"
+        />
+        <BigButton
+          to="/exercises/naming"
+          emoji="🏷️"
+          label={t('exerciseHub.namingTitle')}
+          sublabel={t('exerciseHub.namingSub')}
+        />
+        <BigButton
+          to="/exercises/odd-one-out"
+          emoji="🔍"
+          label={t('exerciseHub.oddOneOutTitle')}
+          sublabel={t('exerciseHub.oddOneOutSub')}
+          tone="teal"
+        />
+        <BigButton
+          to="/exercises/trivia"
+          emoji="📻"
+          label={t('exerciseHub.triviaTitle')}
+          sublabel={t('exerciseHub.triviaSub')}
+        />
       </div>
     </PageShell>
   )
