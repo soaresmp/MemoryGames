@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { useTranslation } from 'react-i18next'
 import { PageShell, GentleFeedback } from '../../components/ui'
 import SessionComplete from '../../components/SessionComplete'
 import { useProfile } from '../../lib/ProfileContext'
@@ -8,13 +9,14 @@ import { shuffle } from '../../lib/util'
 
 export default function CategorySortExercise() {
   const { profile, logSession } = useProfile()
+  const { t } = useTranslation()
   const cfg = STAGE_CONFIG[profile.stage].categorySort
 
   const [set] = useState(() => shuffle(CATEGORY_SETS)[0])
   const [items] = useState<CategoryItem[]>(() => {
-    const perCategory = Math.ceil(cfg.itemCount / set.categories.length)
-    const grouped = set.categories.flatMap((cat) =>
-      shuffle(set.items.filter((i) => i.category === cat)).slice(0, perCategory),
+    const perCategory = Math.ceil(cfg.itemCount / set.categoryKeys.length)
+    const grouped = set.categoryKeys.flatMap((cat) =>
+      shuffle(set.items.filter((i) => i.categoryKey === cat)).slice(0, perCategory),
     )
     return shuffle(grouped).slice(0, cfg.itemCount)
   })
@@ -28,14 +30,14 @@ export default function CategorySortExercise() {
   const item = items[index]
   const done = index >= items.length
 
-  const choose = (category: string) => {
+  const choose = (categoryKey: string) => {
     if (feedback) return
-    if (category === item.category) {
+    if (categoryKey === item.categoryKey) {
       setFeedback('correct')
       setCorrectCount((c) => c + 1)
     } else {
       setFeedback('hint')
-      setChosenWrong(category)
+      setChosenWrong(categoryKey)
     }
   }
 
@@ -49,32 +51,32 @@ export default function CategorySortExercise() {
   }
 
   return (
-    <PageShell title="Sort It Out">
+    <PageShell title={t('sort.pageTitle')}>
       {done ? (
-        <SessionComplete nextTo={{ to: '/exercises/routine', label: 'What Comes Next' }} />
+        <SessionComplete nextTo={{ to: '/exercises/routine', label: t('exerciseHub.routineTitle') }} />
       ) : (
         <div className="surface rounded-2xl border-4 border-amber bg-soft-amber p-6 text-center">
-          <p className="mb-3 text-xl opacity-80">Where does this belong?</p>
+          <p className="mb-3 text-xl opacity-80">{t('sort.prompt')}</p>
           <p className="mb-6 text-3xl font-extrabold">
             <span className="mr-3 text-6xl" aria-hidden="true">
               {item.emoji}
             </span>
-            {item.label}
+            {t(`sort.item.${item.itemKey}`)}
           </p>
           <div className="flex flex-col gap-3 sm:flex-row">
-            {set.categories.map((category) => (
+            {set.categoryKeys.map((categoryKey) => (
               <button
-                key={category}
-                onClick={() => choose(category)}
+                key={categoryKey}
+                onClick={() => choose(categoryKey)}
                 className={`flex-1 rounded-xl border-4 p-5 text-xl font-bold transition-colors ${
-                  feedback && category === item.category
+                  feedback && categoryKey === item.categoryKey
                     ? 'border-teal bg-teal text-white'
-                    : chosenWrong === category
+                    : chosenWrong === categoryKey
                       ? 'border-ink/30 bg-white opacity-60'
                       : 'border-ink/20 bg-white hover:bg-cream-dark'
                 }`}
               >
-                {category}
+                {t(`sort.category.${categoryKey}`)}
               </button>
             ))}
           </div>
@@ -84,7 +86,7 @@ export default function CategorySortExercise() {
               onClick={next}
               className="btn-primary mt-5 w-full rounded-xl bg-amber p-4 text-xl font-bold text-white hover:bg-amber-dark"
             >
-              Continue
+              {t('common.continue')}
             </button>
           )}
         </div>

@@ -1,78 +1,67 @@
 import { useMemo, useState } from 'react'
+import { useTranslation } from 'react-i18next'
 import { PageShell, GentleFeedback } from '../../components/ui'
 import SessionComplete from '../../components/SessionComplete'
 import { useProfile } from '../../lib/ProfileContext'
 import { STAGE_CONFIG } from '../../lib/difficulty'
 import { pickDistractors, shuffle } from '../../lib/util'
+import { DATE_LOCALE, SOUTHERN_HEMISPHERE, type Language } from '../../i18n'
 
-const DAYS = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
-const MONTHS = [
-  'January', 'February', 'March', 'April', 'May', 'June',
-  'July', 'August', 'September', 'October', 'November', 'December',
-]
-const SEASONS = ['Winter', 'Spring', 'Summer', 'Autumn']
+function seasonIndexForMonth(monthIndex: number, southernHemisphere: boolean): number {
+  // index into ['winter', 'spring', 'summer', 'autumn']; flipped for the southern hemisphere.
+  let season = 0 // winter
+  if ([2, 3, 4].includes(monthIndex)) season = 1 // spring
+  else if ([5, 6, 7].includes(monthIndex)) season = 2 // summer
+  else if ([8, 9, 10].includes(monthIndex)) season = 3 // autumn
 
-function seasonForMonth(monthIndex: number): string {
-  // Northern-hemisphere default; a caregiver setting could flip this per region in a future iteration.
-  if ([11, 0, 1].includes(monthIndex)) return 'Winter'
-  if ([2, 3, 4].includes(monthIndex)) return 'Spring'
-  if ([5, 6, 7].includes(monthIndex)) return 'Summer'
-  return 'Autumn'
+  return southernHemisphere ? (season + 2) % 4 : season
 }
 
-function timeOfDay(hour: number): string {
-  if (hour < 12) return 'Morning'
-  if (hour < 18) return 'Afternoon'
-  return 'Evening'
+function timeOfDayKey(hour: number): 'morning' | 'afternoon' | 'evening' {
+  if (hour < 12) return 'morning'
+  if (hour < 18) return 'afternoon'
+  return 'evening'
 }
 
 interface Question {
-  prompt: string
+  promptKey: string
   emoji: string
   correct: string
   choices: string[]
 }
 
-function buildQuestions(choiceCount: number): Question[] {
-  const now = new Date()
-  const day = DAYS[now.getDay()]
-  const month = MONTHS[now.getMonth()]
-  const season = seasonForMonth(now.getMonth())
-  const tod = timeOfDay(now.getHours())
-
-  const extra = choiceCount - 1
-  return shuffle([
-    {
-      prompt: 'What day of the week is it today?',
-      emoji: '📅',
-      correct: day,
-      choices: shuffle([day, ...pickDistractors(DAYS, day, extra)]),
-    },
-    {
-      prompt: 'What month are we in?',
-      emoji: '🗓️',
-      correct: month,
-      choices: shuffle([month, ...pickDistractors(MONTHS, month, extra)]),
-    },
-    {
-      prompt: 'What season is it?',
-      emoji: '🍂',
-      correct: season,
-      choices: shuffle([season, ...pickDistractors(SEASONS, season, extra)]),
-    },
-    {
-      prompt: 'Is it morning, afternoon, or evening right now?',
-      emoji: '🕐',
-      correct: tod,
-      choices: shuffle([tod, ...pickDistractors(['Morning', 'Afternoon', 'Evening'], tod, extra)]),
-    },
-  ])
-}
-
 export default function OrientationExercise() {
   const { profile, logSession } = useProfile()
+  const { t } = useTranslation()
   const cfg = STAGE_CONFIG[profile.stage].orientation
-  const [questions] = useState(() => buildQuestions(cfg.choiceCount).slice(0, cfg.questionCount))
+  const language = profile.language as Language
+
+  const [questions] = useState(() => {
+    const days = t('orientation.days', { returnObjects: true }) as string[]
+    const months = t('orientation.months', { returnObjects: true }) as string[]
+    const seasons = [
+      t('orientation.seasons.winter'),
+      t('orientation.seasons.spring'),
+      t('orientation.seasons.summer'),
+      t('orientation.seasons.autumn'),
+    ]
+    const timesOfDay = [t('orientation.timeOfDay.morning'), t('orientation.timeOfDay.afternoon'), t('orientation.timeOfDay.evening')]
+
+    const now = new Date()
+    const day = days[now.getDay()]
+    const month = months[now.getMonth()]
+    const season = seasons[seasonIndexForMonth(now.getMonth(), SOUTHERN_HEMISPHERE[language])]
+    const tod = timesOfDay[['morning', 'afternoon', 'evening'].indexOf(timeOfDayKey(now.getHours()))]
+
+    const extra = cfg.choiceCount - 1
+    const all: Question[] = shuffle([
+      { promptKey: 'orientation.q1', emoji: '📅', correct: day, choices: shuffle([day, ...pickDistractors(days, day, extra)]) },
+      { promptKey: 'orientation.q2', emoji: '🗓️', correct: month, choices: shuffle([month, ...pickDistractors(months, month, extra)]) },
+      { promptKey: 'orientation.q3', emoji: '🍂', correct: season, choices: shuffle([season, ...pickDistractors(seasons, season, extra)]) },
+      { promptKey: 'orientation.q4', emoji: '🕐', correct: tod, choices: shuffle([tod, ...pickDistractors(timesOfDay, tod, extra)]) },
+    ])
+    return all.slice(0, cfg.questionCount)
+  })
   const [index, setIndex] = useState(0)
   const [feedback, setFeedback] = useState<'correct' | 'hint' | null>(null)
   const [correctCount, setCorrectCount] = useState(0)
@@ -104,28 +93,28 @@ export default function OrientationExercise() {
 
   const today = useMemo(
     () =>
-      new Date().toLocaleDateString(undefined, {
+      new Date().toLocaleDateString(DATE_LOCALE[language], {
         weekday: 'long',
         year: 'numeric',
         month: 'long',
         day: 'numeric',
       }),
-    [],
+    [language],
   )
 
   return (
-    <PageShell title="Where & When">
+    <PageShell title={t('orientation.pageTitle')}>
       <div className="surface mb-6 rounded-2xl border-4 border-teal bg-soft-teal p-5 text-center">
-        <p className="text-2xl font-bold text-teal-dark">Today is {today}</p>
+        <p className="text-2xl font-bold text-teal-dark">{t('orientation.todayIs', { date: today })}</p>
       </div>
 
       {done ? (
-        <SessionComplete nextTo={{ to: '/exercises/faces', label: 'Faces I Know' }} />
+        <SessionComplete nextTo={{ to: '/exercises/faces', label: t('exerciseHub.faceNameTitle') }} />
       ) : (
         <div className="surface rounded-2xl border-4 border-amber bg-soft-amber p-6">
           <p className="mb-5 text-2xl font-bold">
             <span aria-hidden="true">{question.emoji} </span>
-            {question.prompt}
+            {t(question.promptKey)}
           </p>
           <div className="flex flex-col gap-3">
             {question.choices.map((choice) => (
@@ -148,7 +137,7 @@ export default function OrientationExercise() {
               onClick={next}
               className="btn-primary mt-5 w-full rounded-xl bg-amber p-4 text-xl font-bold text-white hover:bg-amber-dark"
             >
-              Continue
+              {t('common.continue')}
             </button>
           )}
         </div>

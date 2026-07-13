@@ -34,10 +34,19 @@ cognitive-rehabilitation literature, not a generic "brain game":
 ## Caregiver zone
 
 - Set the patient's stage (Early / Middle) — rescales every exercise's difficulty.
+- Choose the app language: English, Português (Brasil), Español, or Français.
 - Add/remove loved ones (name, relationship, avatar) that populate *Faces I Know*.
 - Choose which reminiscence topics appear in *Memory Lane*.
 - Adjust text size and toggle a high-contrast theme.
 - View a day-streak, weekly session count, and a plain-language activity log.
+
+## Language support
+
+The whole app — orientation questions, exercise content, caregiver settings — is translated,
+not just the chrome. Built on `i18next` / `react-i18next`, language auto-detects from the
+browser on first run and is otherwise a caregiver setting (`src/i18n/`). The **Where & When**
+exercise also flips its season logic for Southern-Hemisphere locales (Português/Brasil ships
+as Southern; the season question would otherwise be wrong for six months of the year).
 
 ## Running it
 
@@ -56,11 +65,13 @@ npm run build      # production build to dist/
 - `src/lib/difficulty.ts` — per-stage difficulty table consumed by every exercise.
 - `src/pages/exercises/*` — the five exercises; `src/pages/Reminiscence.tsx` and the caregiver
   pages (`Progress.tsx`, `CaregiverSettings.tsx`) round out the app.
+- `src/i18n/` — `i18next` config plus `locales/{en,pt-BR,es,fr}.json`. All exercise content
+  (categories, routine steps, reminiscence themes) is keyed, not hardcoded English, so it
+  translates along with the UI chrome.
 
 ## Prototype limitations & next steps
 
 This is a design/engineering prototype, not a validated clinical tool. Before any real-world
 use with patients it would need: clinician/caregiver usability testing, a proper WCAG audit,
-real photo upload (currently emoji avatars) for *Faces I Know*, multi-language support,
-a Southern-Hemisphere season setting, and — if used beyond a single device/browser — a real
-backend with authentication rather than `localStorage`.
+real photo upload (currently emoji avatars) for *Faces I Know*, and — if used beyond a single
+device/browser — a real backend with authentication rather than `localStorage`.

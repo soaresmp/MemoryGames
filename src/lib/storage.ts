@@ -1,20 +1,25 @@
 import type { ExerciseId, PatientProfile } from './types'
+import i18n, { detectSupportedLanguage } from '../i18n'
 
 const STORAGE_KEY = 'mindtrail.profile.v1'
 
 function defaultProfile(): PatientProfile {
   const now = 0 // dueAt=0 means "due immediately" for a fresh profile
+  const language = detectSupportedLanguage()
+  const t = i18n.getFixedT(language)
   return {
-    name: 'Friend',
+    name: t('common.defaultPatientName'),
     stage: 'initial',
+    language,
     fontScale: 1,
     highContrast: false,
     lovedOnes: [
-      { id: 'lo1', name: 'Anna', relationship: 'Daughter', emoji: '👩', intervalStep: 0, dueAt: now },
-      { id: 'lo2', name: 'Tom', relationship: 'Son', emoji: '👨', intervalStep: 0, dueAt: now },
-      { id: 'lo3', name: 'Biscuit', relationship: 'Dog', emoji: '🐶', intervalStep: 0, dueAt: now },
+      { id: 'lo1', name: 'Anna', relationship: t('relationship.daughter'), emoji: '👩', intervalStep: 0, dueAt: now },
+      { id: 'lo2', name: 'Tom', relationship: t('relationship.son'), emoji: '👨', intervalStep: 0, dueAt: now },
+      { id: 'lo3', name: 'Biscuit', relationship: t('relationship.dog'), emoji: '🐶', intervalStep: 0, dueAt: now },
     ],
-    reminiscenceThemes: ['Music of the 60s', 'Childhood games', 'Family holidays', 'Old family recipes'],
+    // keys into reminiscence.themes / reminiscence.prompts, not display text
+    reminiscenceThemes: ['music60s', 'childhoodGames', 'familyHolidays', 'oldRecipes'],
     log: [],
     streakDays: 0,
     lastActiveDate: null,

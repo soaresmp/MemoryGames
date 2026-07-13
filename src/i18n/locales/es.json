@@ -1,0 +1,200 @@
+{
+  "common": {
+    "home": "Inicio",
+    "continue": "Continuar",
+    "remove": "Eliminar",
+    "feedbackCorrect": "¡Así es, muy bien!",
+    "feedbackHint": "Aquí tienes una ayudita.",
+    "sessionCompleteTitle": "¡Muy bien hecho!",
+    "sessionCompleteBody": "El ejercicio ha terminado por ahora.",
+    "tryNext": "Prueba {{label}}",
+    "optional": "(opcional)",
+    "defaultPatientName": "Amigo/a"
+  },
+  "stage": {
+    "initial": "Etapa inicial",
+    "medium": "Etapa intermedia"
+  },
+  "relationship": {
+    "daughter": "Hija",
+    "son": "Hijo",
+    "dog": "Perro",
+    "family": "Familia"
+  },
+  "home": {
+    "greetingMorning": "Buenos días",
+    "greetingAfternoon": "Buenas tardes",
+    "greetingEvening": "Buenas noches",
+    "appName": "MindTrail",
+    "streak_one": "{{count}} día seguido",
+    "streak_other": "{{count}} días seguidos",
+    "todayTitle": "Hoy",
+    "todaySub": "¿Qué día es hoy? Vamos a comprobarlo",
+    "exercisesTitle": "Ejercicios Mentales",
+    "exercisesSub": "Actividades breves y agradables",
+    "reminisceTitle": "Recuerdos",
+    "reminisceSub": "Habla de los viejos tiempos",
+    "forFamily": "Para familiares y cuidadores",
+    "progressTitle": "Progreso",
+    "progressSub": "Ver la actividad reciente",
+    "settingsTitle": "Ajustes"
+  },
+  "exerciseHub": {
+    "title": "Ejercicios Mentales",
+    "subtitle": "Elige uno para probar. Sin prisa y sin respuestas incorrectas.",
+    "orientationTitle": "Dónde y Cuándo",
+    "orientationSub": "Un momento para orientarse",
+    "faceNameTitle": "Caras que Conozco",
+    "faceNameSub": "Practica nombres familiares",
+    "matchTitle": "Juego de Memoria",
+    "matchSub": "Encuentra las imágenes que coinciden",
+    "sortTitle": "Ordénalo",
+    "sortSub": "Agrupa las cosas que van juntas",
+    "routineTitle": "Qué Viene Después",
+    "routineSub": "Pon los pasos en orden"
+  },
+  "orientation": {
+    "pageTitle": "Dónde y Cuándo",
+    "todayIs": "Hoy es {{date}}",
+    "q1": "¿Qué día de la semana es hoy?",
+    "q2": "¿En qué mes estamos?",
+    "q3": "¿Qué estación del año es?",
+    "q4": "¿Ahora es de mañana, de tarde o de noche?",
+    "days": ["Domingo", "Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado"],
+    "months": ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"],
+    "seasons": {
+      "winter": "Invierno",
+      "spring": "Primavera",
+      "summer": "Verano",
+      "autumn": "Otoño"
+    },
+    "timeOfDay": {
+      "morning": "Mañana",
+      "afternoon": "Tarde",
+      "evening": "Noche"
+    }
+  },
+  "faceName": {
+    "pageTitle": "Caras que Conozco",
+    "studyButton": "Lo recordaré — ponme a prueba",
+    "recallPrompt": "¿Quién es esta persona?"
+  },
+  "match": {
+    "pageTitle": "Juego de Memoria",
+    "revealHint": "Tómate un momento para mirar todas las imágenes...",
+    "playHint": "Toca dos cartas para encontrar una pareja.",
+    "hiddenCardLabel": "Carta oculta"
+  },
+  "sort": {
+    "pageTitle": "Ordénalo",
+    "prompt": "¿Dónde va esto?",
+    "category": {
+      "fruit": "Frutas",
+      "tools": "Herramientas",
+      "animals": "Animales",
+      "kitchen": "Cocina"
+    },
+    "item": {
+      "apple": "Manzana",
+      "banana": "Plátano",
+      "orange": "Naranja",
+      "grapes": "Uvas",
+      "hammer": "Martillo",
+      "wrench": "Llave inglesa",
+      "scissors": "Tijeras",
+      "screwdriver": "Destornillador",
+      "dog": "Perro",
+      "cat": "Gato",
+      "bird": "Pájaro",
+      "rabbit": "Conejo",
+      "kettle": "Tetera",
+      "cup": "Taza",
+      "spoon": "Cuchara",
+      "plate": "Plato"
+    }
+  },
+  "routine": {
+    "pageTitle": "Qué Viene Después",
+    "instructions": "Toca los pasos en el orden en que los harías.",
+    "placeholder": "Tu orden aparecerá aquí...",
+    "correctOrderLabel": "Este es el orden correcto:",
+    "checkButton": "Comprobar mi orden",
+    "sets": {
+      "tea": {
+        "title": "Preparar una taza de té",
+        "steps": ["Llenar la tetera con agua", "Hervir el agua", "Verter el agua sobre la bolsita de té", "Añadir leche y remover"]
+      },
+      "bedtime": {
+        "title": "Prepararse para dormir",
+        "steps": ["Ponerse el pijama", "Cepillarse los dientes", "Apagar la luz", "Meterse en la cama"]
+      },
+      "toast": {
+        "title": "Preparar una tostada para el desayuno",
+        "steps": ["Sacar una rebanada de pan", "Ponerla en la tostadora", "Untar mantequilla", "Disfrutar la tostada"]
+      }
+    }
+  },
+  "reminiscence": {
+    "pageTitle": "Recuerdos",
+    "instructions": "Coméntalo con la familia, o anota una palabra o dos abajo.",
+    "nextButton": "Siguiente recuerdo",
+    "finishButton": "Terminar",
+    "themes": {
+      "music60s": "Música de los años 60",
+      "childhoodGames": "Juegos de la infancia",
+      "familyHolidays": "Vacaciones familiares",
+      "oldRecipes": "Recetas antiguas de la familia",
+      "firstJob": "Primer trabajo",
+      "pets": "Mascotas"
+    },
+    "prompts": {
+      "music60s": "¿Cuál era una canción que te encantaba bailar?",
+      "childhoodGames": "¿A qué jugabas fuera de casa cuando eras niño/a?",
+      "familyHolidays": "¿Dónde le gustaba a tu familia pasar las vacaciones?",
+      "oldRecipes": "¿Qué plato cocinaba mejor tu madre?",
+      "firstJob": "¿Cuál fue el primer trabajo que tuviste?",
+      "pets": "¿Tuviste una mascota de niño/a? ¿Cómo se llamaba?"
+    }
+  },
+  "progress": {
+    "pageTitle": "Progreso",
+    "intro": "Este es un registro de actividad amable para la familia y los cuidadores — no es una calificación. La constancia y el disfrute importan más que \"acertar\".",
+    "streakLabel": "días seguidos",
+    "sessionsThisWeek": "actividades esta semana",
+    "activityByExercise": "Actividad por ejercicio",
+    "recentSessions": "Actividades recientes",
+    "noSessions": "Aún no hay actividades registradas — prueba un ejercicio desde la pantalla de inicio.",
+    "engagement": {
+      "great": "Muy buena participación",
+      "good": "Buena participación",
+      "extra": "Necesitó más apoyo"
+    },
+    "exerciseNames": {
+      "orientation": "Dónde y Cuándo",
+      "faceName": "Caras que Conozco",
+      "matchPairs": "Juego de Memoria",
+      "categorySort": "Ordénalo",
+      "routineSequence": "Qué Viene Después",
+      "reminiscence": "Recuerdos"
+    }
+  },
+  "settings": {
+    "pageTitle": "Ajustes",
+    "patientNameLabel": "Nombre del paciente",
+    "stageLabel": "Etapa de la demencia",
+    "stageDesc": "Ajusta la cantidad de elementos, opciones y el ritmo en todos los ejercicios — menos distracciones y más tiempo en la etapa intermedia.",
+    "languageLabel": "Idioma",
+    "languageDesc": "Cambia el idioma utilizado en toda la aplicación.",
+    "accessibilityLabel": "Accesibilidad",
+    "textSizeLabel": "Tamaño del texto ({{pct}}%)",
+    "highContrastLabel": "Modo de alto contraste",
+    "facesLabel": "Caras que Conozco — seres queridos",
+    "facesDesc": "Personalízalo con familiares y amigos reales para que el ejercicio \"Caras que Conozco\" practique nombres que de verdad importan.",
+    "removeAria": "Eliminar a {{name}}",
+    "namePlaceholder": "Nombre",
+    "relationshipPlaceholder": "Parentesco (ej.: Nieta)",
+    "addButton": "Añadir persona",
+    "themesLabel": "Temas de Recuerdos",
+    "themesDesc": "Elige qué temas de recuerdos aparecen en Recuerdos."
+  }
+}

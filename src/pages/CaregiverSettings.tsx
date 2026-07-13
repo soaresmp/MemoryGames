@@ -1,26 +1,30 @@
 import { useState } from 'react'
+import { useTranslation } from 'react-i18next'
 import { PageShell } from '../components/ui'
 import { useProfile } from '../lib/ProfileContext'
-import { STAGE_LABEL, type LovedOne, type Stage } from '../lib/types'
+import type { LovedOne, Stage } from '../lib/types'
 import { REMINISCENCE_PROMPTS } from '../lib/sampleData'
+import { SUPPORTED_LANGUAGES, LANGUAGE_LABEL, type Language } from '../i18n'
 
-const ALL_THEMES = Array.from(new Set(REMINISCENCE_PROMPTS.map((p) => p.theme)))
+const ALL_THEME_KEYS = Array.from(new Set(REMINISCENCE_PROMPTS.map((p) => p.themeKey)))
 const AVATAR_EMOJIS = ['👩', '👨', '👵', '👴', '🧑', '👧', '👦', '🐶', '🐱']
 
 export default function CaregiverSettings() {
   const { profile, setProfile } = useProfile()
+  const { t } = useTranslation()
   const [newName, setNewName] = useState('')
   const [newRelationship, setNewRelationship] = useState('')
   const [newEmoji, setNewEmoji] = useState(AVATAR_EMOJIS[0])
 
   const setStage = (stage: Stage) => setProfile((p) => ({ ...p, stage }))
+  const setLanguage = (language: Language) => setProfile((p) => ({ ...p, language }))
 
   const addLovedOne = () => {
     if (!newName.trim()) return
     const person: LovedOne = {
       id: crypto.randomUUID(),
       name: newName.trim(),
-      relationship: newRelationship.trim() || 'Family',
+      relationship: newRelationship.trim() || t('relationship.family'),
       emoji: newEmoji,
       intervalStep: 0,
       dueAt: 0,
@@ -34,19 +38,19 @@ export default function CaregiverSettings() {
     setProfile((p) => ({ ...p, lovedOnes: p.lovedOnes.filter((lo) => lo.id !== id) }))
   }
 
-  const toggleTheme = (theme: string) => {
+  const toggleTheme = (themeKey: string) => {
     setProfile((p) => ({
       ...p,
-      reminiscenceThemes: p.reminiscenceThemes.includes(theme)
-        ? p.reminiscenceThemes.filter((t) => t !== theme)
-        : [...p.reminiscenceThemes, theme],
+      reminiscenceThemes: p.reminiscenceThemes.includes(themeKey)
+        ? p.reminiscenceThemes.filter((k) => k !== themeKey)
+        : [...p.reminiscenceThemes, themeKey],
     }))
   }
 
   return (
-    <PageShell title="Settings">
+    <PageShell title={t('settings.pageTitle')}>
       <section className="surface mb-6 rounded-2xl border-2 border-ink/20 bg-white p-5">
-        <h2 className="mb-3 text-xl font-bold">Patient name</h2>
+        <h2 className="mb-3 text-xl font-bold">{t('settings.patientNameLabel')}</h2>
         <input
           value={profile.name}
           onChange={(e) => setProfile((p) => ({ ...p, name: e.target.value }))}
@@ -55,11 +59,26 @@ export default function CaregiverSettings() {
       </section>
 
       <section className="surface mb-6 rounded-2xl border-2 border-ink/20 bg-white p-5">
-        <h2 className="mb-3 text-xl font-bold">Dementia stage</h2>
-        <p className="mb-3 text-base opacity-70">
-          Adjusts item counts, choices, and pacing across every exercise — fewer distractors and more time for
-          middle stage.
-        </p>
+        <h2 className="mb-3 text-xl font-bold">{t('settings.languageLabel')}</h2>
+        <p className="mb-3 text-base opacity-70">{t('settings.languageDesc')}</p>
+        <div className="grid grid-cols-2 gap-3">
+          {SUPPORTED_LANGUAGES.map((language) => (
+            <button
+              key={language}
+              onClick={() => setLanguage(language)}
+              className={`rounded-xl border-4 p-4 text-lg font-bold ${
+                profile.language === language ? 'border-teal bg-teal text-white' : 'border-ink/20 bg-cream-dark'
+              }`}
+            >
+              {LANGUAGE_LABEL[language]}
+            </button>
+          ))}
+        </div>
+      </section>
+
+      <section className="surface mb-6 rounded-2xl border-2 border-ink/20 bg-white p-5">
+        <h2 className="mb-3 text-xl font-bold">{t('settings.stageLabel')}</h2>
+        <p className="mb-3 text-base opacity-70">{t('settings.stageDesc')}</p>
         <div className="flex gap-3">
           {(['initial', 'medium'] as Stage[]).map((stage) => (
             <button
@@ -69,17 +88,17 @@ export default function CaregiverSettings() {
                 profile.stage === stage ? 'border-teal bg-teal text-white' : 'border-ink/20 bg-cream-dark'
               }`}
             >
-              {STAGE_LABEL[stage]}
+              {t(`stage.${stage}`)}
             </button>
           ))}
         </div>
       </section>
 
       <section className="surface mb-6 rounded-2xl border-2 border-ink/20 bg-white p-5">
-        <h2 className="mb-3 text-xl font-bold">Accessibility</h2>
+        <h2 className="mb-3 text-xl font-bold">{t('settings.accessibilityLabel')}</h2>
         <div className="mb-4">
           <label className="mb-2 block text-lg font-semibold" htmlFor="fontScale">
-            Text size ({Math.round(profile.fontScale * 100)}%)
+            {t('settings.textSizeLabel', { pct: Math.round(profile.fontScale * 100) })}
           </label>
           <input
             id="fontScale"
@@ -99,15 +118,13 @@ export default function CaregiverSettings() {
             onChange={(e) => setProfile((p) => ({ ...p, highContrast: e.target.checked }))}
             className="h-6 w-6"
           />
-          High-contrast mode
+          {t('settings.highContrastLabel')}
         </label>
       </section>
 
       <section className="surface mb-6 rounded-2xl border-2 border-ink/20 bg-white p-5">
-        <h2 className="mb-1 text-xl font-bold">Faces I Know — loved ones</h2>
-        <p className="mb-4 text-base opacity-70">
-          Personalize with real family &amp; friends so the "Faces I Know" exercise practices names that matter.
-        </p>
+        <h2 className="mb-1 text-xl font-bold">{t('settings.facesLabel')}</h2>
+        <p className="mb-4 text-base opacity-70">{t('settings.facesDesc')}</p>
         <ul className="mb-4 flex flex-col gap-2">
           {profile.lovedOnes.map((lo) => (
             <li key={lo.id} className="flex items-center justify-between gap-2 rounded-xl bg-cream-dark p-3">
@@ -119,10 +136,10 @@ export default function CaregiverSettings() {
               </span>
               <button
                 onClick={() => removeLovedOne(lo.id)}
-                aria-label={`Remove ${lo.name}`}
+                aria-label={t('settings.removeAria', { name: lo.name })}
                 className="rounded-lg px-3 py-1 text-lg font-bold text-amber-dark hover:bg-soft-amber"
               >
-                Remove
+                {t('common.remove')}
               </button>
             </li>
           ))}
@@ -144,39 +161,39 @@ export default function CaregiverSettings() {
           <input
             value={newName}
             onChange={(e) => setNewName(e.target.value)}
-            placeholder="Name"
+            placeholder={t('settings.namePlaceholder')}
             className="rounded-xl border-2 border-ink/20 p-3 text-lg"
           />
           <input
             value={newRelationship}
             onChange={(e) => setNewRelationship(e.target.value)}
-            placeholder="Relationship (e.g. Granddaughter)"
+            placeholder={t('settings.relationshipPlaceholder')}
             className="rounded-xl border-2 border-ink/20 p-3 text-lg"
           />
           <button
             onClick={addLovedOne}
             className="rounded-xl bg-teal p-3 text-lg font-bold text-white hover:bg-teal-dark"
           >
-            Add person
+            {t('settings.addButton')}
           </button>
         </div>
       </section>
 
       <section className="surface rounded-2xl border-2 border-ink/20 bg-white p-5">
-        <h2 className="mb-1 text-xl font-bold">Memory Lane topics</h2>
-        <p className="mb-4 text-base opacity-70">Choose which reminiscence topics appear in Memory Lane.</p>
+        <h2 className="mb-1 text-xl font-bold">{t('settings.themesLabel')}</h2>
+        <p className="mb-4 text-base opacity-70">{t('settings.themesDesc')}</p>
         <div className="flex flex-wrap gap-2">
-          {ALL_THEMES.map((theme) => (
+          {ALL_THEME_KEYS.map((themeKey) => (
             <button
-              key={theme}
-              onClick={() => toggleTheme(theme)}
+              key={themeKey}
+              onClick={() => toggleTheme(themeKey)}
               className={`rounded-full border-2 px-4 py-2 text-base font-semibold ${
-                profile.reminiscenceThemes.includes(theme)
+                profile.reminiscenceThemes.includes(themeKey)
                   ? 'border-teal bg-soft-teal'
                   : 'border-ink/20 bg-cream-dark opacity-60'
               }`}
             >
-              {theme}
+              {t(`reminiscence.themes.${themeKey}`)}
             </button>
           ))}
         </div>

@@ -1,5 +1,6 @@
 import type { ReactNode } from 'react'
 import { Link } from 'react-router-dom'
+import { useTranslation } from 'react-i18next'
 
 /** Large, high-contrast tappable card — the only interaction unit patient screens use. */
 export function BigButton({
@@ -51,12 +52,13 @@ export function BigButton({
 }
 
 export function HomeLink() {
+  const { t } = useTranslation()
   return (
     <Link
       to="/"
       className="surface inline-flex items-center gap-2 rounded-xl border-2 border-ink/20 bg-white/70 px-5 py-3 text-xl font-semibold text-ink shadow-sm hover:bg-white"
     >
-      <span aria-hidden="true">🏠</span> Home
+      <span aria-hidden="true">🏠</span> {t('common.home')}
     </Link>
   )
 }
@@ -75,17 +77,18 @@ export function PageShell({ title, children }: { title: string; children: ReactN
 
 /** Gentle, non-judgmental feedback — errorless-learning UI never shows a hard "wrong" mark. */
 export function GentleFeedback({ state }: { state: 'correct' | 'hint' | null }) {
+  const { t } = useTranslation()
   if (!state) return null
   if (state === 'correct') {
     return (
       <p className="mt-4 rounded-xl bg-soft-teal p-4 text-2xl font-bold text-teal-dark" role="status">
-        ✅ That's right, well done!
+        ✅ {t('common.feedbackCorrect')}
       </p>
     )
   }
   return (
     <p className="mt-4 rounded-xl bg-soft-amber p-4 text-2xl font-bold text-amber-dark" role="status">
-      💡 Here's a little help.
+      💡 {t('common.feedbackHint')}
     </p>
   )
 }

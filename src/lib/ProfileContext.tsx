@@ -1,6 +1,7 @@
 import { createContext, useContext, useEffect, useState, type ReactNode } from 'react'
 import type { ExerciseId, PatientProfile } from './types'
 import { loadProfile, recordSession, saveProfile } from './storage'
+import i18n from '../i18n'
 
 interface ProfileContextValue {
   profile: PatientProfile
@@ -21,6 +22,13 @@ export function ProfileProvider({ children }: { children: ReactNode }) {
     document.documentElement.style.fontSize = `${100 * profile.fontScale}%`
     document.documentElement.classList.toggle('high-contrast', profile.highContrast)
   }, [profile.fontScale, profile.highContrast])
+
+  useEffect(() => {
+    document.documentElement.lang = profile.language
+    if (i18n.language !== profile.language) {
+      i18n.changeLanguage(profile.language)
+    }
+  }, [profile.language])
 
   const setProfile = (updater: (p: PatientProfile) => PatientProfile) => {
     setProfileState((prev) => updater(prev))

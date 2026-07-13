@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import { useTranslation } from 'react-i18next'
 import { PageShell } from '../../components/ui'
 import SessionComplete from '../../components/SessionComplete'
 import { useProfile } from '../../lib/ProfileContext'
@@ -14,6 +15,7 @@ interface Card {
 
 export default function MatchPairsExercise() {
   const { profile, logSession } = useProfile()
+  const { t } = useTranslation()
   const cfg = STAGE_CONFIG[profile.stage].matchPairs
 
   const [cards] = useState<Card[]>(() => {
@@ -29,11 +31,11 @@ export default function MatchPairsExercise() {
   const [locked, setLocked] = useState(true)
 
   useEffect(() => {
-    const t = setTimeout(() => {
+    const timer = setTimeout(() => {
       setRevealAll(false)
       setLocked(false)
     }, cfg.revealMs)
-    return () => clearTimeout(t)
+    return () => clearTimeout(timer)
   }, [cfg.revealMs])
 
   const done = matched.size === cards.length
@@ -67,14 +69,12 @@ export default function MatchPairsExercise() {
   }
 
   return (
-    <PageShell title="Matching Pairs">
+    <PageShell title={t('match.pageTitle')}>
       {done ? (
-        <SessionComplete nextTo={{ to: '/exercises/sort', label: 'Sort It Out' }} />
+        <SessionComplete nextTo={{ to: '/exercises/sort', label: t('exerciseHub.sortTitle') }} />
       ) : (
         <>
-          <p className="mb-5 text-xl opacity-80">
-            {revealAll ? 'Take a moment to look at all the pictures...' : 'Tap two cards to find a matching pair.'}
-          </p>
+          <p className="mb-5 text-xl opacity-80">{revealAll ? t('match.revealHint') : t('match.playHint')}</p>
           <div
             className="grid gap-3"
             style={{ gridTemplateColumns: `repeat(${Math.min(cfg.columns, cards.length)}, minmax(0, 1fr))` }}
@@ -85,7 +85,7 @@ export default function MatchPairsExercise() {
                 <button
                   key={card.id}
                   onClick={() => flip(card.id)}
-                  aria-label={faceUp ? card.emoji : 'Hidden card'}
+                  aria-label={faceUp ? card.emoji : t('match.hiddenCardLabel')}
                   className={`surface flex aspect-square items-center justify-center rounded-2xl border-4 text-4xl transition-colors sm:text-5xl ${
                     matched.has(card.id)
                       ? 'border-teal bg-soft-teal'

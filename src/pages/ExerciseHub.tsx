@@ -1,15 +1,44 @@
+import { useTranslation } from 'react-i18next'
 import { BigButton, PageShell } from '../components/ui'
 
 export default function ExerciseHub() {
+  const { t } = useTranslation()
   return (
-    <PageShell title="Brain Exercises">
-      <p className="mb-6 text-xl opacity-80">Pick one to try. There's no rush and no wrong answers.</p>
+    <PageShell title={t('exerciseHub.title')}>
+      <p className="mb-6 text-xl opacity-80">{t('exerciseHub.subtitle')}</p>
       <div className="flex flex-col gap-4">
-        <BigButton to="/exercises/orientation" emoji="🗓️" label="Where & When" sublabel="A gentle check-in" />
-        <BigButton to="/exercises/faces" emoji="👪" label="Faces I Know" sublabel="Practice familiar names" tone="teal" />
-        <BigButton to="/exercises/match" emoji="🃏" label="Matching Pairs" sublabel="Find the matching pictures" />
-        <BigButton to="/exercises/sort" emoji="🗂️" label="Sort It Out" sublabel="Group things that go together" tone="teal" />
-        <BigButton to="/exercises/routine" emoji="📋" label="What Comes Next" sublabel="Put the steps in order" />
+        <BigButton
+          to="/exercises/orientation"
+          emoji="🗓️"
+          label={t('exerciseHub.orientationTitle')}
+          sublabel={t('exerciseHub.orientationSub')}
+        />
+        <BigButton
+          to="/exercises/faces"
+          emoji="👪"
+          label={t('exerciseHub.faceNameTitle')}
+          sublabel={t('exerciseHub.faceNameSub')}
+          tone="teal"
+        />
+        <BigButton
+          to="/exercises/match"
+          emoji="🃏"
+          label={t('exerciseHub.matchTitle')}
+          sublabel={t('exerciseHub.matchSub')}
+        />
+        <BigButton
+          to="/exercises/sort"
+          emoji="🗂️"
+          label={t('exerciseHub.sortTitle')}
+          sublabel={t('exerciseHub.sortSub')}
+          tone="teal"
+        />
+        <BigButton
+          to="/exercises/routine"
+          emoji="📋"
+          label={t('exerciseHub.routineTitle')}
+          sublabel={t('exerciseHub.routineSub')}
+        />
       </div>
     </PageShell>
   )

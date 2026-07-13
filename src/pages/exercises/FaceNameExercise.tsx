@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import { useTranslation } from 'react-i18next'
 import { PageShell, GentleFeedback } from '../../components/ui'
 import SessionComplete from '../../components/SessionComplete'
 import { useProfile } from '../../lib/ProfileContext'
@@ -11,6 +12,7 @@ type Phase = 'study' | 'recall'
 
 export default function FaceNameExercise() {
   const { profile, setProfile, logSession } = useProfile()
+  const { t } = useTranslation()
   const cfg = STAGE_CONFIG[profile.stage].faceName
   const [queue] = useState<LovedOne[]>(() => {
     const due = dueLovedOnes(profile.lovedOnes, Date.now())
@@ -41,8 +43,8 @@ export default function FaceNameExercise() {
 
   if (done) {
     return (
-      <PageShell title="Faces I Know">
-        <SessionComplete nextTo={{ to: '/exercises/match', label: 'Matching Pairs' }} />
+      <PageShell title={t('faceName.pageTitle')}>
+        <SessionComplete nextTo={{ to: '/exercises/match', label: t('exerciseHub.matchTitle') }} />
       </PageShell>
     )
   }
@@ -76,7 +78,7 @@ export default function FaceNameExercise() {
   }
 
   return (
-    <PageShell title="Faces I Know">
+    <PageShell title={t('faceName.pageTitle')}>
       <div className="surface flex flex-col items-center gap-5 rounded-2xl border-4 border-teal bg-soft-teal p-8 text-center">
         <span className="text-8xl" aria-hidden="true">
           {person.emoji}
@@ -90,12 +92,12 @@ export default function FaceNameExercise() {
               onClick={() => setPhase('recall')}
               className="btn-primary rounded-xl bg-teal px-6 py-4 text-xl font-bold text-white hover:bg-teal-dark"
             >
-              I'll remember — test me
+              {t('faceName.studyButton')}
             </button>
           </>
         ) : (
           <>
-            <p className="text-2xl font-bold">Who is this?</p>
+            <p className="text-2xl font-bold">{t('faceName.recallPrompt')}</p>
             <div className="flex w-full flex-col gap-3">
               {choices.map((choice) => (
                 <button
@@ -117,7 +119,7 @@ export default function FaceNameExercise() {
                 onClick={next}
                 className="btn-primary w-full rounded-xl bg-amber px-6 py-4 text-xl font-bold text-white hover:bg-amber-dark"
               >
-                Continue
+                {t('common.continue')}
               </button>
             )}
           </>

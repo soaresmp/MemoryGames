@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { useTranslation } from 'react-i18next'
 import { PageShell } from '../../components/ui'
 import SessionComplete from '../../components/SessionComplete'
 import { useProfile } from '../../lib/ProfileContext'
@@ -14,12 +15,15 @@ interface Step {
 
 export default function RoutineSequenceExercise() {
   const { profile, logSession } = useProfile()
+  const { t } = useTranslation()
   const cfg = STAGE_CONFIG[profile.stage].routineSequence
 
   const [routine] = useState(() => shuffle(ROUTINE_SETS)[0])
-  const [correctSteps] = useState<Step[]>(() =>
-    routine.steps.slice(0, cfg.stepCount).map((s, id) => ({ id, ...s })),
-  )
+  const routineTitle = t(`routine.sets.${routine.setKey}.title`)
+  const [correctSteps] = useState<Step[]>(() => {
+    const stepLabels = t(`routine.sets.${routine.setKey}.steps`, { returnObjects: true }) as string[]
+    return routine.steps.slice(0, cfg.stepCount).map((s, id) => ({ id, emoji: s.emoji, label: stepLabels[id] }))
+  })
   const [pool, setPool] = useState<Step[]>(() => shuffle(correctSteps))
   const [placed, setPlaced] = useState<Step[]>([])
   const [checked, setChecked] = useState(false)
@@ -40,11 +44,11 @@ export default function RoutineSequenceExercise() {
   const done = checked
 
   return (
-    <PageShell title="What Comes Next">
+    <PageShell title={t('routine.pageTitle')}>
       {done ? (
         <div className="flex flex-col gap-6">
           <div className="surface rounded-2xl border-4 border-teal bg-soft-teal p-6">
-            <p className="mb-4 text-xl font-bold text-teal-dark">Here's the order:</p>
+            <p className="mb-4 text-xl font-bold text-teal-dark">{t('routine.correctOrderLabel')}</p>
             <ol className="flex flex-col gap-2">
               {correctSteps.map((s, i) => (
                 <li
@@ -61,16 +65,16 @@ export default function RoutineSequenceExercise() {
               ))}
             </ol>
           </div>
-          <SessionComplete nextTo={{ to: '/reminisce', label: 'Memory Lane' }} />
+          <SessionComplete nextTo={{ to: '/reminisce', label: t('home.reminisceTitle') }} />
         </div>
       ) : (
         <>
-          <p className="mb-2 text-xl opacity-80">{routine.title}</p>
-          <p className="mb-5 text-lg opacity-70">Tap the steps in the order you'd do them.</p>
+          <p className="mb-2 text-xl opacity-80">{routineTitle}</p>
+          <p className="mb-5 text-lg opacity-70">{t('routine.instructions')}</p>
 
           <div className="surface mb-5 min-h-20 rounded-2xl border-4 border-dashed border-ink/20 bg-white p-4">
             {placed.length === 0 ? (
-              <p className="text-lg opacity-50">Your order will appear here...</p>
+              <p className="text-lg opacity-50">{t('routine.placeholder')}</p>
             ) : (
               <ol className="flex flex-col gap-2">
                 {placed.map((s, i) => (
@@ -105,7 +109,7 @@ export default function RoutineSequenceExercise() {
               onClick={check}
               className="btn-primary mt-5 w-full rounded-xl bg-teal p-4 text-xl font-bold text-white hover:bg-teal-dark"
             >
-              Check my order
+              {t('routine.checkButton')}
             </button>
           )}
         </>

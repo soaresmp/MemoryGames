@@ -1,3 +1,5 @@
+import type { Language } from '../i18n'
+
 export type Stage = 'initial' | 'medium'
 
 export type ExerciseId =
@@ -36,6 +38,7 @@ export interface CaregiverNote {
 export interface PatientProfile {
   name: string
   stage: Stage
+  language: Language
   fontScale: number // 1 = base, up to 1.5
   highContrast: boolean
   lovedOnes: LovedOne[]
@@ -44,9 +47,4 @@ export interface PatientProfile {
   streakDays: number
   lastActiveDate: string | null
   caregiverNotes: CaregiverNote[]
-}
-
-export const STAGE_LABEL: Record<Stage, string> = {
-  initial: 'Early stage',
-  medium: 'Middle stage',
 }

@@ -1,0 +1,200 @@
+{
+  "common": {
+    "home": "Home",
+    "continue": "Continue",
+    "remove": "Remove",
+    "feedbackCorrect": "That's right, well done!",
+    "feedbackHint": "Here's a little help.",
+    "sessionCompleteTitle": "Nicely done!",
+    "sessionCompleteBody": "That's the exercise finished for now.",
+    "tryNext": "Try {{label}}",
+    "optional": "(optional)",
+    "defaultPatientName": "Friend"
+  },
+  "stage": {
+    "initial": "Early stage",
+    "medium": "Middle stage"
+  },
+  "relationship": {
+    "daughter": "Daughter",
+    "son": "Son",
+    "dog": "Dog",
+    "family": "Family"
+  },
+  "home": {
+    "greetingMorning": "Good morning",
+    "greetingAfternoon": "Good afternoon",
+    "greetingEvening": "Good evening",
+    "appName": "MindTrail",
+    "streak_one": "{{count}} day in a row",
+    "streak_other": "{{count}} days in a row",
+    "todayTitle": "Today",
+    "todaySub": "What day is it? Let's check in",
+    "exercisesTitle": "Brain Exercises",
+    "exercisesSub": "Short, friendly activities",
+    "reminisceTitle": "Memory Lane",
+    "reminisceSub": "Talk about old times",
+    "forFamily": "For family & caregivers",
+    "progressTitle": "Progress",
+    "progressSub": "See recent activity",
+    "settingsTitle": "Settings"
+  },
+  "exerciseHub": {
+    "title": "Brain Exercises",
+    "subtitle": "Pick one to try. There's no rush and no wrong answers.",
+    "orientationTitle": "Where & When",
+    "orientationSub": "A gentle check-in",
+    "faceNameTitle": "Faces I Know",
+    "faceNameSub": "Practice familiar names",
+    "matchTitle": "Matching Pairs",
+    "matchSub": "Find the matching pictures",
+    "sortTitle": "Sort It Out",
+    "sortSub": "Group things that go together",
+    "routineTitle": "What Comes Next",
+    "routineSub": "Put the steps in order"
+  },
+  "orientation": {
+    "pageTitle": "Where & When",
+    "todayIs": "Today is {{date}}",
+    "q1": "What day of the week is it today?",
+    "q2": "What month are we in?",
+    "q3": "What season is it?",
+    "q4": "Is it morning, afternoon, or evening right now?",
+    "days": ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+    "months": ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
+    "seasons": {
+      "winter": "Winter",
+      "spring": "Spring",
+      "summer": "Summer",
+      "autumn": "Autumn"
+    },
+    "timeOfDay": {
+      "morning": "Morning",
+      "afternoon": "Afternoon",
+      "evening": "Evening"
+    }
+  },
+  "faceName": {
+    "pageTitle": "Faces I Know",
+    "studyButton": "I'll remember — test me",
+    "recallPrompt": "Who is this?"
+  },
+  "match": {
+    "pageTitle": "Matching Pairs",
+    "revealHint": "Take a moment to look at all the pictures...",
+    "playHint": "Tap two cards to find a matching pair.",
+    "hiddenCardLabel": "Hidden card"
+  },
+  "sort": {
+    "pageTitle": "Sort It Out",
+    "prompt": "Where does this belong?",
+    "category": {
+      "fruit": "Fruit",
+      "tools": "Tools",
+      "animals": "Animals",
+      "kitchen": "Kitchen"
+    },
+    "item": {
+      "apple": "Apple",
+      "banana": "Banana",
+      "orange": "Orange",
+      "grapes": "Grapes",
+      "hammer": "Hammer",
+      "wrench": "Wrench",
+      "scissors": "Scissors",
+      "screwdriver": "Screwdriver",
+      "dog": "Dog",
+      "cat": "Cat",
+      "bird": "Bird",
+      "rabbit": "Rabbit",
+      "kettle": "Kettle",
+      "cup": "Cup",
+      "spoon": "Spoon",
+      "plate": "Plate"
+    }
+  },
+  "routine": {
+    "pageTitle": "What Comes Next",
+    "instructions": "Tap the steps in the order you'd do them.",
+    "placeholder": "Your order will appear here...",
+    "correctOrderLabel": "Here's the order:",
+    "checkButton": "Check my order",
+    "sets": {
+      "tea": {
+        "title": "Making a cup of tea",
+        "steps": ["Fill the kettle with water", "Boil the water", "Pour water over the tea bag", "Add milk and stir"]
+      },
+      "bedtime": {
+        "title": "Getting ready for bed",
+        "steps": ["Put on pyjamas", "Brush your teeth", "Turn off the light", "Get into bed"]
+      },
+      "toast": {
+        "title": "Making breakfast toast",
+        "steps": ["Take out a slice of bread", "Put it in the toaster", "Spread butter on top", "Enjoy the toast"]
+      }
+    }
+  },
+  "reminiscence": {
+    "pageTitle": "Memory Lane",
+    "instructions": "Talk it through with family, or jot a word or two below.",
+    "nextButton": "Next memory",
+    "finishButton": "Finish",
+    "themes": {
+      "music60s": "Music of the 60s",
+      "childhoodGames": "Childhood games",
+      "familyHolidays": "Family holidays",
+      "oldRecipes": "Old family recipes",
+      "firstJob": "First job",
+      "pets": "Pets"
+    },
+    "prompts": {
+      "music60s": "What was a song you loved to dance to?",
+      "childhoodGames": "What games did you play outside as a child?",
+      "familyHolidays": "Where did your family like to spend the holidays?",
+      "oldRecipes": "What meal did your mother cook best?",
+      "firstJob": "What was the first job you ever had?",
+      "pets": "Did you have a pet growing up? What was their name?"
+    }
+  },
+  "progress": {
+    "pageTitle": "Progress",
+    "intro": "This is a gentle activity log for family and caregivers — not a test score. Consistency and enjoyment matter more than \"getting it right.\"",
+    "streakLabel": "day streak",
+    "sessionsThisWeek": "sessions this week",
+    "activityByExercise": "Activity by exercise",
+    "recentSessions": "Recent sessions",
+    "noSessions": "No sessions logged yet — try an exercise from the home screen.",
+    "engagement": {
+      "great": "Great engagement",
+      "good": "Good engagement",
+      "extra": "Needed extra support"
+    },
+    "exerciseNames": {
+      "orientation": "Where & When",
+      "faceName": "Faces I Know",
+      "matchPairs": "Matching Pairs",
+      "categorySort": "Sort It Out",
+      "routineSequence": "What Comes Next",
+      "reminiscence": "Memory Lane"
+    }
+  },
+  "settings": {
+    "pageTitle": "Settings",
+    "patientNameLabel": "Patient name",
+    "stageLabel": "Dementia stage",
+    "stageDesc": "Adjusts item counts, choices, and pacing across every exercise — fewer distractors and more time for middle stage.",
+    "languageLabel": "Language",
+    "languageDesc": "Changes the language used across the whole app.",
+    "accessibilityLabel": "Accessibility",
+    "textSizeLabel": "Text size ({{pct}}%)",
+    "highContrastLabel": "High-contrast mode",
+    "facesLabel": "Faces I Know — loved ones",
+    "facesDesc": "Personalize with real family & friends so the \"Faces I Know\" exercise practices names that matter.",
+    "removeAria": "Remove {{name}}",
+    "namePlaceholder": "Name",
+    "relationshipPlaceholder": "Relationship (e.g. Granddaughter)",
+    "addButton": "Add person",
+    "themesLabel": "Memory Lane topics",
+    "themesDesc": "Choose which reminiscence topics appear in Memory Lane."
+  }
+}

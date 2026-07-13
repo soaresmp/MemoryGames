@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { useTranslation } from 'react-i18next'
 import { PageShell } from '../components/ui'
 import SessionComplete from '../components/SessionComplete'
 import { useProfile } from '../lib/ProfileContext'
@@ -8,10 +9,11 @@ import { shuffle } from '../lib/util'
 
 export default function Reminiscence() {
   const { profile, logSession } = useProfile()
+  const { t } = useTranslation()
   const cfg = STAGE_CONFIG[profile.stage].reminiscence
 
   const [prompts] = useState(() => {
-    const active = REMINISCENCE_PROMPTS.filter((p) => profile.reminiscenceThemes.includes(p.theme))
+    const active = REMINISCENCE_PROMPTS.filter((p) => profile.reminiscenceThemes.includes(p.themeKey))
     const pool = active.length > 0 ? active : REMINISCENCE_PROMPTS
     return shuffle(pool).slice(0, cfg.promptCount)
   })
@@ -30,21 +32,23 @@ export default function Reminiscence() {
   }
 
   return (
-    <PageShell title="Memory Lane">
+    <PageShell title={t('reminiscence.pageTitle')}>
       {done ? (
-        <SessionComplete nextTo={{ to: '/exercises', label: 'Brain Exercises' }} />
+        <SessionComplete nextTo={{ to: '/exercises', label: t('home.exercisesTitle') }} />
       ) : (
         <div className="surface flex flex-col items-center gap-5 rounded-2xl border-4 border-teal bg-soft-teal p-8 text-center">
-          <p className="text-lg font-semibold uppercase tracking-wide text-teal-dark opacity-80">{prompt.theme}</p>
+          <p className="text-lg font-semibold uppercase tracking-wide text-teal-dark opacity-80">
+            {t(`reminiscence.themes.${prompt.themeKey}`)}
+          </p>
           <span className="text-7xl" aria-hidden="true">
             {prompt.emoji}
           </span>
-          <p className="text-2xl font-bold">{prompt.prompt}</p>
-          <p className="text-lg opacity-70">Talk it through with family, or jot a word or two below.</p>
+          <p className="text-2xl font-bold">{t(`reminiscence.prompts.${prompt.themeKey}`)}</p>
+          <p className="text-lg opacity-70">{t('reminiscence.instructions')}</p>
           <textarea
             value={notes[index] ?? ''}
             onChange={(e) => setNotes((n) => ({ ...n, [index]: e.target.value }))}
-            placeholder="(optional)"
+            placeholder={t('common.optional')}
             rows={2}
             className="w-full rounded-xl border-2 border-ink/20 bg-white p-3 text-lg"
           />
@@ -52,7 +56,7 @@ export default function Reminiscence() {
             onClick={next}
             className="btn-primary w-full rounded-xl bg-teal px-6 py-4 text-xl font-bold text-white hover:bg-teal-dark"
           >
-            {index + 1 >= prompts.length ? 'Finish' : 'Next memory'}
+            {index + 1 >= prompts.length ? t('reminiscence.finishButton') : t('reminiscence.nextButton')}
           </button>
         </div>
       )}
