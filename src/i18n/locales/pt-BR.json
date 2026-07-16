@@ -59,7 +59,9 @@
     "oddOneOutTitle": "O Diferente",
     "oddOneOutSub": "Qual não combina com os outros?",
     "triviaTitle": "Lá do Passado",
-    "triviaSub": "Perguntas divertidas de outros tempos"
+    "triviaSub": "Perguntas divertidas de outros tempos",
+    "wordPuzzleTitle": "Palavras Cruzadas",
+    "wordPuzzleSub": "Forme a palavra a partir da dica"
   },
   "orientation": {
     "pageTitle": "Onde & Quando",
@@ -187,7 +189,8 @@
       "patternRepeat": "Repita o Padrão",
       "naming": "Como se Chama",
       "oddOneOut": "O Diferente",
-      "trivia": "Lá do Passado"
+      "trivia": "Lá do Passado",
+      "wordPuzzle": "Palavras Cruzadas"
     }
   },
   "settings": {
@@ -351,6 +354,24 @@
       "q8": {
         "prompt": "O que as pessoas costumavam usar para se locomover pela cidade antes dos carros serem comuns?",
         "options": ["Uma carruagem puxada por cavalos", "Uma patinete elétrica", "Um carro de aplicativo"]
+      }
+    }
+  },
+  "wordPuzzle": {
+    "pageTitle": "Palavras Cruzadas",
+    "crossingNote": "Esta letra veio da sua última palavra!",
+    "puzzles": {
+      "p1": {
+        "wordA": "SOL", "shareIndexA": 1, "clueA": "Ele brilha no céu de dia", "emojiA": "☀️",
+        "wordB": "GATO", "shareIndexB": 3, "clueB": "Um animal que faz miau", "emojiB": "🐱"
+      },
+      "p2": {
+        "wordA": "BOLA", "shareIndexA": 2, "clueA": "Você chuta ou joga isso", "emojiA": "⚽",
+        "wordB": "LUA", "shareIndexB": 0, "clueB": "Ela brilha à noite no céu", "emojiB": "🌙"
+      },
+      "p3": {
+        "wordA": "CASA", "shareIndexA": 2, "clueA": "Onde você mora", "emojiA": "🏠",
+        "wordB": "SAPO", "shareIndexB": 0, "clueB": "Um bicho verde que pula", "emojiB": "🐸"
       }
     }
   }

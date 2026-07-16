@@ -107,3 +107,10 @@ export const PATTERN_PADS: PatternPad[] = [
   { key: 'blossom', emoji: '🌸' },
   { key: 'star', emoji: '⭐' },
 ]
+
+/**
+ * Translation keys only — each locale's wordPuzzle.puzzles.<key> supplies its
+ * own wordA/wordB/shareIndexA/shareIndexB, since crossing-letter positions
+ * are inherently language-specific (translations don't share spelling).
+ */
+export const WORD_PUZZLE_KEYS = ['p1', 'p2', 'p3']

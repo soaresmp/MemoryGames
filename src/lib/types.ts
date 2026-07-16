@@ -13,6 +13,7 @@ export type ExerciseId =
   | 'naming'
   | 'oddOneOut'
   | 'trivia'
+  | 'wordPuzzle'
 
 export interface LovedOne {
   id: string

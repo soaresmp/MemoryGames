@@ -31,7 +31,7 @@ export default function TriviaExercise() {
   return (
     <PageShell title={t('trivia.pageTitle')}>
       {done ? (
-        <SessionComplete nextTo={{ to: '/reminisce', label: t('home.reminisceTitle') }} />
+        <SessionComplete nextTo={{ to: '/exercises/word-puzzle', label: t('exerciseHub.wordPuzzleTitle') }} />
       ) : (
         <TriviaQuestion
           key={index}

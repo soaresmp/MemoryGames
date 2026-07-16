@@ -10,6 +10,7 @@ import PatternRepeatExercise from './pages/exercises/PatternRepeatExercise'
 import NamingExercise from './pages/exercises/NamingExercise'
 import OddOneOutExercise from './pages/exercises/OddOneOutExercise'
 import TriviaExercise from './pages/exercises/TriviaExercise'
+import WordPuzzleExercise from './pages/exercises/WordPuzzleExercise'
 import Reminiscence from './pages/Reminiscence'
 import Progress from './pages/Progress'
 import CaregiverSettings from './pages/CaregiverSettings'
@@ -30,6 +31,7 @@ export default function App() {
       <Route path="/exercises/naming" element={<NamingExercise />} />
       <Route path="/exercises/odd-one-out" element={<OddOneOutExercise />} />
       <Route path="/exercises/trivia" element={<TriviaExercise />} />
+      <Route path="/exercises/word-puzzle" element={<WordPuzzleExercise />} />
       <Route path="/reminisce" element={<Reminiscence />} />
       <Route path="/progress" element={<Progress />} />
       <Route path="/settings" element={<CaregiverSettings />} />

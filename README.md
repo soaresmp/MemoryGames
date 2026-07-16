@@ -25,6 +25,7 @@ cognitive-rehabilitation literature, not a generic "brain game":
 | **Name This** (picture naming) | Confrontation naming is one of the earliest and most closely tracked language changes in dementia (assessed in essentially every clinical cognitive battery); practicing it in a low-pressure, errorless format supports language function without the stakes of a test. |
 | **Odd One Out** | A single-decision-per-screen variant of semantic categorization — gentler than sorting a full set (as in *Sort It Out*) while still exercising the same categorical-reasoning skill. |
 | **Blast From the Past** (nostalgia trivia) | Leverages the **reminiscence bump** — autobiographical memories from adolescence/early adulthood stay disproportionately accessible in dementia — with always-gettable, positively-framed multiple-choice questions about pre-digital daily life, as a lighter-touch counterpart to *Memory Lane*'s open-ended prompts. |
+| **Word Puzzle** (crossword-inspired spelling) | A randomized-controlled trial found crossword puzzles held cognitive performance in amnestic MCI as well as or better than a computerized cognitive-training app, with less brain atrophy on MRI over 78 weeks (Devanand et al., *NEJM Evidence*, 2022). Adapted here as tap-tile letter spelling (no free typing) with a small pre-filled shared letter carried over from the previous word, keeping the errorless-learning format instead of a free-form grid. |
 | **Cognitive Check-in** (clock-setting, delayed word recall, attention task, caregiver questionnaire) | Inspired by the cognitive domains real screening tools assess — the **Clock Drawing Test** / Mini-Cog (visuospatial/executive function), **MMSE/MoCA**-style delayed recall and serial-subtraction attention tasks, and the caregiver-interview domains behind staging tools like the **GDS** and **CDR** — without reproducing any of those copyrighted instruments verbatim. Deliberately outputs *no numeric score or stage claim*, only banded plain-language observations ("no / some / considerable difficulty observed") explicitly framed as a doctor-visit conversation starter, never a diagnosis. |
 
 ## Exercises
@@ -38,6 +39,7 @@ cognitive-rehabilitation literature, not a generic "brain game":
 - **Name This** — picture-naming task with multiple-choice answers (language / confrontation naming).
 - **Odd One Out** — one wrong-category item among four; tap the one that doesn't belong (categorical reasoning).
 - **Blast From the Past** — always-answerable nostalgia trivia about pre-digital daily life (reminiscence bump).
+- **Word Puzzle** — spell a clued word by tapping letter tiles, then a crossing word that reuses one shared letter (crossword-inspired, no free typing).
 - **Memory Lane** — themed reminiscence prompts for a caregiver-assisted conversation.
 
 ## Cognitive Check-in
@@ -92,7 +94,7 @@ npm run build      # production build to dist/
 - `src/lib/storage.ts` — `localStorage`-backed profile persistence.
 - `src/lib/spacedRetrieval.ts` — expanding-interval scheduling for *Faces I Know*.
 - `src/lib/difficulty.ts` — per-stage difficulty table consumed by every exercise.
-- `src/pages/exercises/*` — the nine exercises; `src/pages/Reminiscence.tsx` and the caregiver
+- `src/pages/exercises/*` — the ten exercises; `src/pages/Reminiscence.tsx` and the caregiver
   pages (`Progress.tsx`, `CaregiverSettings.tsx`) round out the app.
 - `src/i18n/` — `i18next` config plus `locales/{en,pt-BR,es,fr}.json`. All exercise content
   (categories, routine steps, reminiscence themes) is keyed, not hardcoded English, so it

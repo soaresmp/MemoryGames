@@ -59,7 +59,9 @@
     "oddOneOutTitle": "L'Intrus",
     "oddOneOutSub": "Lequel ne va pas avec les autres ?",
     "triviaTitle": "Souvenirs d'Autrefois",
-    "triviaSub": "Des questions amusantes du bon vieux temps"
+    "triviaSub": "Des questions amusantes du bon vieux temps",
+    "wordPuzzleTitle": "Mots Croisés",
+    "wordPuzzleSub": "Formez le mot à partir de l'indice"
   },
   "orientation": {
     "pageTitle": "Où & Quand",
@@ -187,7 +189,8 @@
       "patternRepeat": "Répétez le Motif",
       "naming": "Comment Ça S'appelle",
       "oddOneOut": "L'Intrus",
-      "trivia": "Souvenirs d'Autrefois"
+      "trivia": "Souvenirs d'Autrefois",
+      "wordPuzzle": "Mots Croisés"
     }
   },
   "settings": {
@@ -351,6 +354,24 @@
       "q8": {
         "prompt": "Qu'utilisait-on souvent pour se déplacer en ville avant que les voitures soient courantes ?",
         "options": ["Une calèche", "Une trottinette électrique", "Une voiture de VTC"]
+      }
+    }
+  },
+  "wordPuzzle": {
+    "pageTitle": "Mots Croisés",
+    "crossingNote": "Cette lettre vient de votre mot précédent !",
+    "puzzles": {
+      "p1": {
+        "wordA": "LUNE", "shareIndexA": 2, "clueA": "Elle brille la nuit dans le ciel", "emojiA": "🌙",
+        "wordB": "NEZ", "shareIndexB": 0, "clueB": "Il est au milieu du visage", "emojiB": "👃"
+      },
+      "p2": {
+        "wordA": "CHAT", "shareIndexA": 3, "clueA": "Un animal qui dit miaou", "emojiA": "🐱",
+        "wordB": "TASSE", "shareIndexB": 0, "clueB": "On boit dedans le matin", "emojiB": "☕"
+      },
+      "p3": {
+        "wordA": "MAISON", "shareIndexA": 3, "clueA": "L'endroit où vous habitez", "emojiA": "🏠",
+        "wordB": "SAC", "shareIndexB": 0, "clueB": "On y met ses affaires", "emojiB": "👜"
       }
     }
   }

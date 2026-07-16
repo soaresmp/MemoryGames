@@ -59,7 +59,9 @@
     "oddOneOutTitle": "Odd One Out",
     "oddOneOutSub": "Which one doesn't belong?",
     "triviaTitle": "Blast From the Past",
-    "triviaSub": "Fun questions from days gone by"
+    "triviaSub": "Fun questions from days gone by",
+    "wordPuzzleTitle": "Word Puzzle",
+    "wordPuzzleSub": "Spell the word from the clue"
   },
   "orientation": {
     "pageTitle": "Where & When",
@@ -187,7 +189,8 @@
       "patternRepeat": "Pattern Repeat",
       "naming": "Name This",
       "oddOneOut": "Odd One Out",
-      "trivia": "Blast From the Past"
+      "trivia": "Blast From the Past",
+      "wordPuzzle": "Word Puzzle"
     }
   },
   "settings": {
@@ -351,6 +354,24 @@
       "q8": {
         "prompt": "What did people often ride to get around town before cars were common?",
         "options": ["A horse and carriage", "An electric scooter", "A rideshare car"]
+      }
+    }
+  },
+  "wordPuzzle": {
+    "pageTitle": "Word Puzzle",
+    "crossingNote": "This letter came from your last word!",
+    "puzzles": {
+      "p1": {
+        "wordA": "SUN", "shareIndexA": 2, "clueA": "It lights up the sky", "emojiA": "☀️",
+        "wordB": "NET", "shareIndexB": 0, "clueB": "You use it to catch fish", "emojiB": "🥅"
+      },
+      "p2": {
+        "wordA": "CAT", "shareIndexA": 1, "clueA": "A pet that says meow", "emojiA": "🐱",
+        "wordB": "HAT", "shareIndexB": 1, "clueB": "You wear it on your head", "emojiB": "🎩"
+      },
+      "p3": {
+        "wordA": "DOG", "shareIndexA": 1, "clueA": "A pet that barks", "emojiA": "🐶",
+        "wordB": "SOAP", "shareIndexB": 1, "clueB": "You use it to wash your hands", "emojiB": "🧼"
       }
     }
   }

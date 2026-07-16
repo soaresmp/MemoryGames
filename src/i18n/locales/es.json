@@ -59,7 +59,9 @@
     "oddOneOutTitle": "El Diferente",
     "oddOneOutSub": "¿Cuál no pertenece al grupo?",
     "triviaTitle": "Recuerdos del Pasado",
-    "triviaSub": "Preguntas divertidas de otros tiempos"
+    "triviaSub": "Preguntas divertidas de otros tiempos",
+    "wordPuzzleTitle": "Palabras Cruzadas",
+    "wordPuzzleSub": "Forma la palabra a partir de la pista"
   },
   "orientation": {
     "pageTitle": "Dónde y Cuándo",
@@ -187,7 +189,8 @@
       "patternRepeat": "Repite el Patrón",
       "naming": "Cómo se Llama",
       "oddOneOut": "El Diferente",
-      "trivia": "Recuerdos del Pasado"
+      "trivia": "Recuerdos del Pasado",
+      "wordPuzzle": "Palabras Cruzadas"
     }
   },
   "settings": {
@@ -351,6 +354,24 @@
       "q8": {
         "prompt": "¿Qué solía usar la gente para moverse por la ciudad antes de que los coches fueran comunes?",
         "options": ["Un carruaje de caballos", "Un patinete eléctrico", "Un coche de aplicación"]
+      }
+    }
+  },
+  "wordPuzzle": {
+    "pageTitle": "Palabras Cruzadas",
+    "crossingNote": "¡Esta letra vino de tu palabra anterior!",
+    "puzzles": {
+      "p1": {
+        "wordA": "SOL", "shareIndexA": 0, "clueA": "Brilla en el cielo durante el día", "emojiA": "☀️",
+        "wordB": "OSO", "shareIndexB": 1, "clueB": "Un animal grande y peludo del bosque", "emojiB": "🐻"
+      },
+      "p2": {
+        "wordA": "GATO", "shareIndexA": 1, "clueA": "Un animal que dice miau", "emojiA": "🐱",
+        "wordB": "PATO", "shareIndexB": 1, "clueB": "Un animal que nada y dice cuac", "emojiB": "🦆"
+      },
+      "p3": {
+        "wordA": "CASA", "shareIndexA": 2, "clueA": "El lugar donde vives", "emojiA": "🏠",
+        "wordB": "SAPO", "shareIndexB": 0, "clueB": "Un animal verde que salta", "emojiB": "🐸"
       }
     }
   }

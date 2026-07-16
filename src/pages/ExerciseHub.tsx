@@ -65,6 +65,13 @@ export default function ExerciseHub() {
           label={t('exerciseHub.triviaTitle')}
           sublabel={t('exerciseHub.triviaSub')}
         />
+        <BigButton
+          to="/exercises/word-puzzle"
+          emoji="🧩"
+          label={t('exerciseHub.wordPuzzleTitle')}
+          sublabel={t('exerciseHub.wordPuzzleSub')}
+          tone="teal"
+        />
       </div>
     </PageShell>
   )
