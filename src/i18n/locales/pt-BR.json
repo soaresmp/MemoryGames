@@ -70,8 +70,29 @@
     "q2": "Em que mês estamos?",
     "q3": "Que estação do ano é esta?",
     "q4": "Agora é de manhã, à tarde ou à noite?",
-    "days": ["Domingo", "Segunda-feira", "Terça-feira", "Quarta-feira", "Quinta-feira", "Sexta-feira", "Sábado"],
-    "months": ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"],
+    "days": [
+      "Domingo",
+      "Segunda-feira",
+      "Terça-feira",
+      "Quarta-feira",
+      "Quinta-feira",
+      "Sexta-feira",
+      "Sábado"
+    ],
+    "months": [
+      "Janeiro",
+      "Fevereiro",
+      "Março",
+      "Abril",
+      "Maio",
+      "Junho",
+      "Julho",
+      "Agosto",
+      "Setembro",
+      "Outubro",
+      "Novembro",
+      "Dezembro"
+    ],
     "seasons": {
       "winter": "Inverno",
       "spring": "Primavera",
@@ -132,15 +153,30 @@
     "sets": {
       "tea": {
         "title": "Fazer uma xícara de chá",
-        "steps": ["Encher a chaleira com água", "Ferver a água", "Despejar a água sobre o saquinho de chá", "Adicionar leite e mexer"]
+        "steps": [
+          "Encher a chaleira com água",
+          "Ferver a água",
+          "Despejar a água sobre o saquinho de chá",
+          "Adicionar leite e mexer"
+        ]
       },
       "bedtime": {
         "title": "Se preparar para dormir",
-        "steps": ["Vestir o pijama", "Escovar os dentes", "Apagar a luz", "Deitar na cama"]
+        "steps": [
+          "Vestir o pijama",
+          "Escovar os dentes",
+          "Apagar a luz",
+          "Deitar na cama"
+        ]
       },
       "toast": {
         "title": "Fazer uma torrada no café da manhã",
-        "steps": ["Pegar uma fatia de pão", "Colocar na torradeira", "Passar manteiga", "Aproveitar a torrada"]
+        "steps": [
+          "Pegar uma fatia de pão",
+          "Colocar na torradeira",
+          "Passar manteiga",
+          "Aproveitar a torrada"
+        ]
       }
     }
   },
@@ -325,53 +361,157 @@
     "questions": {
       "q1": {
         "prompt": "Antes dos smartphones, o que as pessoas costumavam usar para tirar fotos?",
-        "options": ["Uma câmera fotográfica", "Um tablet", "Um relógio inteligente"]
+        "options": [
+          "Uma câmera fotográfica",
+          "Um tablet",
+          "Um relógio inteligente"
+        ]
       },
       "q2": {
         "prompt": "Ao redor de que muitas famílias se reuniam para ouvir música ou notícias antigamente?",
-        "options": ["Um rádio", "Um laptop", "Um videogame"]
+        "options": [
+          "Um rádio",
+          "Um laptop",
+          "Um videogame"
+        ]
       },
       "q3": {
         "prompt": "Antes do streaming, como as pessoas costumavam ouvir suas músicas favoritas em casa?",
-        "options": ["Uma vitrola", "Um assistente de voz", "Um fone sem fio"]
+        "options": [
+          "Uma vitrola",
+          "Um assistente de voz",
+          "Um fone sem fio"
+        ]
       },
       "q4": {
         "prompt": "Como a maioria das pessoas enviava uma mensagem para alguém distante, antigamente?",
-        "options": ["Uma carta escrita à mão", "Uma mensagem de texto", "Uma videochamada"]
+        "options": [
+          "Uma carta escrita à mão",
+          "Uma mensagem de texto",
+          "Uma videochamada"
+        ]
       },
       "q5": {
         "prompt": "Antes dos celulares, como as pessoas faziam uma ligação fora de casa?",
-        "options": ["Um telefone público", "Um alto-falante inteligente", "Um aplicativo de videochamada"]
+        "options": [
+          "Um telefone público",
+          "Um alto-falante inteligente",
+          "Um aplicativo de videochamada"
+        ]
       },
       "q6": {
         "prompt": "O que as pessoas costumavam usar para manter a comida fria antes das geladeiras elétricas serem comuns?",
-        "options": ["Uma geladeira de gelo", "Um micro-ondas", "Uma gaveta freezer"]
+        "options": [
+          "Uma geladeira de gelo",
+          "Um micro-ondas",
+          "Uma gaveta freezer"
+        ]
       },
       "q7": {
         "prompt": "Como as pessoas costumavam assistir aos seus programas favoritos antigamente?",
-        "options": ["Uma televisão em preto e branco", "Um tablet", "Um smartphone"]
+        "options": [
+          "Uma televisão em preto e branco",
+          "Um tablet",
+          "Um smartphone"
+        ]
       },
       "q8": {
         "prompt": "O que as pessoas costumavam usar para se locomover pela cidade antes dos carros serem comuns?",
-        "options": ["Uma carruagem puxada por cavalos", "Uma patinete elétrica", "Um carro de aplicativo"]
+        "options": [
+          "Uma carruagem puxada por cavalos",
+          "Uma patinete elétrica",
+          "Um carro de aplicativo"
+        ]
       }
     }
   },
   "wordPuzzle": {
     "pageTitle": "Palavras Cruzadas",
-    "crossingNote": "Esta letra veio da sua última palavra!",
+    "crossingNote": "Algumas letras já estão preenchidas com base em palavras anteriores!",
     "puzzles": {
       "p1": {
-        "wordA": "SOL", "shareIndexA": 1, "clueA": "Ele brilha no céu de dia", "emojiA": "☀️",
-        "wordB": "GATO", "shareIndexB": 3, "clueB": "Um animal que faz miau", "emojiB": "🐱"
+        "words": [
+          {
+            "word": "SOL",
+            "clue": "Ele brilha no céu de dia",
+            "emoji": "☀️",
+            "row": 0,
+            "col": 0,
+            "direction": "across"
+          },
+          {
+            "word": "SAL",
+            "clue": "Você usa para dar sabor à comida",
+            "emoji": "🧂",
+            "row": 0,
+            "col": 0,
+            "direction": "down"
+          },
+          {
+            "word": "LUA",
+            "clue": "Ela brilha à noite no céu",
+            "emoji": "🌙",
+            "row": 0,
+            "col": 2,
+            "direction": "down"
+          }
+        ]
       },
       "p2": {
-        "wordA": "BOLA", "shareIndexA": 2, "clueA": "Você chuta ou joga isso", "emojiA": "⚽",
-        "wordB": "LUA", "shareIndexB": 0, "clueB": "Ela brilha à noite no céu", "emojiB": "🌙"
+        "words": [
+          {
+            "word": "BOLA",
+            "clue": "Você chuta ou joga isso",
+            "emoji": "⚽",
+            "row": 0,
+            "col": 0,
+            "direction": "across"
+          },
+          {
+            "word": "BOI",
+            "clue": "Um animal de fazenda grande e forte",
+            "emoji": "🐂",
+            "row": 0,
+            "col": 0,
+            "direction": "down"
+          },
+          {
+            "word": "LUZ",
+            "clue": "O que ilumina a sala à noite",
+            "emoji": "💡",
+            "row": 0,
+            "col": 2,
+            "direction": "down"
+          }
+        ]
       },
       "p3": {
-        "wordA": "CASA", "shareIndexA": 2, "clueA": "Onde você mora", "emojiA": "🏠",
-        "wordB": "SAPO", "shareIndexB": 0, "clueB": "Um bicho verde que pula", "emojiB": "🐸"
+        "words": [
+          {
+            "word": "CASA",
+            "clue": "Onde você mora",
+            "emoji": "🏠",
+            "row": 0,
+            "col": 0,
+            "direction": "across"
+          },
+          {
+            "word": "CAMA",
+            "clue": "Onde você dorme à noite",
+            "emoji": "🛏️",
+            "row": 0,
+            "col": 0,
+            "direction": "down"
+          },
+          {
+            "word": "SAPO",
+            "clue": "Um bicho verde que pula",
+            "emoji": "🐸",
+            "row": 0,
+            "col": 2,
+            "direction": "down"
+          }
+        ]
       }
     }
   }

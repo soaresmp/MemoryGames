@@ -70,8 +70,29 @@
     "q2": "En quel mois sommes-nous ?",
     "q3": "Quelle est la saison actuelle ?",
     "q4": "Est-ce le matin, l'après-midi ou le soir en ce moment ?",
-    "days": ["Dimanche", "Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi"],
-    "months": ["Janvier", "Février", "Mars", "Avril", "Mai", "Juin", "Juillet", "Août", "Septembre", "Octobre", "Novembre", "Décembre"],
+    "days": [
+      "Dimanche",
+      "Lundi",
+      "Mardi",
+      "Mercredi",
+      "Jeudi",
+      "Vendredi",
+      "Samedi"
+    ],
+    "months": [
+      "Janvier",
+      "Février",
+      "Mars",
+      "Avril",
+      "Mai",
+      "Juin",
+      "Juillet",
+      "Août",
+      "Septembre",
+      "Octobre",
+      "Novembre",
+      "Décembre"
+    ],
     "seasons": {
       "winter": "Hiver",
       "spring": "Printemps",
@@ -132,15 +153,30 @@
     "sets": {
       "tea": {
         "title": "Préparer une tasse de thé",
-        "steps": ["Remplir la bouilloire d'eau", "Faire bouillir l'eau", "Verser l'eau sur le sachet de thé", "Ajouter du lait et mélanger"]
+        "steps": [
+          "Remplir la bouilloire d'eau",
+          "Faire bouillir l'eau",
+          "Verser l'eau sur le sachet de thé",
+          "Ajouter du lait et mélanger"
+        ]
       },
       "bedtime": {
         "title": "Se préparer à dormir",
-        "steps": ["Mettre son pyjama", "Se brosser les dents", "Éteindre la lumière", "Se coucher"]
+        "steps": [
+          "Mettre son pyjama",
+          "Se brosser les dents",
+          "Éteindre la lumière",
+          "Se coucher"
+        ]
       },
       "toast": {
         "title": "Préparer une tartine pour le petit-déjeuner",
-        "steps": ["Prendre une tranche de pain", "La mettre dans le grille-pain", "Étaler du beurre", "Déguster la tartine"]
+        "steps": [
+          "Prendre une tranche de pain",
+          "La mettre dans le grille-pain",
+          "Étaler du beurre",
+          "Déguster la tartine"
+        ]
       }
     }
   },
@@ -325,53 +361,157 @@
     "questions": {
       "q1": {
         "prompt": "Avant les smartphones, qu'utilisait-on souvent pour prendre des photos ?",
-        "options": ["Un appareil photo argentique", "Une tablette", "Une montre connectée"]
+        "options": [
+          "Un appareil photo argentique",
+          "Une tablette",
+          "Une montre connectée"
+        ]
       },
       "q2": {
         "prompt": "Autour de quoi de nombreuses familles se réunissaient-elles autrefois pour écouter de la musique ou les informations ?",
-        "options": ["Une radio", "Un ordinateur portable", "Une console de jeux"]
+        "options": [
+          "Une radio",
+          "Un ordinateur portable",
+          "Une console de jeux"
+        ]
       },
       "q3": {
         "prompt": "Avant le streaming, comment écoutait-on habituellement sa musique préférée à la maison ?",
-        "options": ["Un tourne-disque", "Un assistant vocal", "Des écouteurs sans fil"]
+        "options": [
+          "Un tourne-disque",
+          "Un assistant vocal",
+          "Des écouteurs sans fil"
+        ]
       },
       "q4": {
         "prompt": "Comment la plupart des gens envoyaient-ils un message à quelqu'un de loin, autrefois ?",
-        "options": ["Une lettre écrite à la main", "Un texto", "Un appel vidéo"]
+        "options": [
+          "Une lettre écrite à la main",
+          "Un texto",
+          "Un appel vidéo"
+        ]
       },
       "q5": {
         "prompt": "Avant les téléphones portables, comment appelait-on quelqu'un en dehors de chez soi ?",
-        "options": ["Une cabine téléphonique publique", "Une enceinte connectée", "Une application d'appel vidéo"]
+        "options": [
+          "Une cabine téléphonique publique",
+          "Une enceinte connectée",
+          "Une application d'appel vidéo"
+        ]
       },
       "q6": {
         "prompt": "Qu'utilisait-on souvent pour garder les aliments au frais avant que les réfrigérateurs électriques soient courants ?",
-        "options": ["Une glacière", "Un four à micro-ondes", "Un tiroir congélateur"]
+        "options": [
+          "Une glacière",
+          "Un four à micro-ondes",
+          "Un tiroir congélateur"
+        ]
       },
       "q7": {
         "prompt": "Comment regardait-on habituellement ses émissions préférées autrefois ?",
-        "options": ["Une télévision en noir et blanc", "Une tablette", "Un smartphone"]
+        "options": [
+          "Une télévision en noir et blanc",
+          "Une tablette",
+          "Un smartphone"
+        ]
       },
       "q8": {
         "prompt": "Qu'utilisait-on souvent pour se déplacer en ville avant que les voitures soient courantes ?",
-        "options": ["Une calèche", "Une trottinette électrique", "Une voiture de VTC"]
+        "options": [
+          "Une calèche",
+          "Une trottinette électrique",
+          "Une voiture de VTC"
+        ]
       }
     }
   },
   "wordPuzzle": {
     "pageTitle": "Mots Croisés",
-    "crossingNote": "Cette lettre vient de votre mot précédent !",
+    "crossingNote": "Certaines lettres sont déjà remplies grâce aux mots précédents !",
     "puzzles": {
       "p1": {
-        "wordA": "LUNE", "shareIndexA": 2, "clueA": "Elle brille la nuit dans le ciel", "emojiA": "🌙",
-        "wordB": "NEZ", "shareIndexB": 0, "clueB": "Il est au milieu du visage", "emojiB": "👃"
+        "words": [
+          {
+            "word": "LUNE",
+            "clue": "Elle brille la nuit dans le ciel",
+            "emoji": "🌙",
+            "row": 0,
+            "col": 0,
+            "direction": "across"
+          },
+          {
+            "word": "LIT",
+            "clue": "Vous y dormez chaque nuit",
+            "emoji": "🛏️",
+            "row": 0,
+            "col": 0,
+            "direction": "down"
+          },
+          {
+            "word": "NEZ",
+            "clue": "Il est au milieu du visage",
+            "emoji": "👃",
+            "row": 0,
+            "col": 2,
+            "direction": "down"
+          }
+        ]
       },
       "p2": {
-        "wordA": "CHAT", "shareIndexA": 3, "clueA": "Un animal qui dit miaou", "emojiA": "🐱",
-        "wordB": "TASSE", "shareIndexB": 0, "clueB": "On boit dedans le matin", "emojiB": "☕"
+        "words": [
+          {
+            "word": "CHAT",
+            "clue": "Un animal qui dit miaou",
+            "emoji": "🐱",
+            "row": 0,
+            "col": 0,
+            "direction": "across"
+          },
+          {
+            "word": "COU",
+            "clue": "La partie du corps entre la tête et les épaules",
+            "emoji": "🦒",
+            "row": 0,
+            "col": 0,
+            "direction": "down"
+          },
+          {
+            "word": "TASSE",
+            "clue": "On boit dedans le matin",
+            "emoji": "☕",
+            "row": 0,
+            "col": 3,
+            "direction": "down"
+          }
+        ]
       },
       "p3": {
-        "wordA": "MAISON", "shareIndexA": 3, "clueA": "L'endroit où vous habitez", "emojiA": "🏠",
-        "wordB": "SAC", "shareIndexB": 0, "clueB": "On y met ses affaires", "emojiB": "👜"
+        "words": [
+          {
+            "word": "MAISON",
+            "clue": "L'endroit où vous habitez",
+            "emoji": "🏠",
+            "row": 0,
+            "col": 0,
+            "direction": "across"
+          },
+          {
+            "word": "MUR",
+            "clue": "Vous accrochez des photos dessus",
+            "emoji": "🖼️",
+            "row": 0,
+            "col": 0,
+            "direction": "down"
+          },
+          {
+            "word": "SAC",
+            "clue": "On y met ses affaires",
+            "emoji": "👜",
+            "row": 0,
+            "col": 3,
+            "direction": "down"
+          }
+        ]
       }
     }
   }

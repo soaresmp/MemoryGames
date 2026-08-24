@@ -70,8 +70,29 @@
     "q2": "What month are we in?",
     "q3": "What season is it?",
     "q4": "Is it morning, afternoon, or evening right now?",
-    "days": ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
-    "months": ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
+    "days": [
+      "Sunday",
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday",
+      "Saturday"
+    ],
+    "months": [
+      "January",
+      "February",
+      "March",
+      "April",
+      "May",
+      "June",
+      "July",
+      "August",
+      "September",
+      "October",
+      "November",
+      "December"
+    ],
     "seasons": {
       "winter": "Winter",
       "spring": "Spring",
@@ -132,15 +153,30 @@
     "sets": {
       "tea": {
         "title": "Making a cup of tea",
-        "steps": ["Fill the kettle with water", "Boil the water", "Pour water over the tea bag", "Add milk and stir"]
+        "steps": [
+          "Fill the kettle with water",
+          "Boil the water",
+          "Pour water over the tea bag",
+          "Add milk and stir"
+        ]
       },
       "bedtime": {
         "title": "Getting ready for bed",
-        "steps": ["Put on pyjamas", "Brush your teeth", "Turn off the light", "Get into bed"]
+        "steps": [
+          "Put on pyjamas",
+          "Brush your teeth",
+          "Turn off the light",
+          "Get into bed"
+        ]
       },
       "toast": {
         "title": "Making breakfast toast",
-        "steps": ["Take out a slice of bread", "Put it in the toaster", "Spread butter on top", "Enjoy the toast"]
+        "steps": [
+          "Take out a slice of bread",
+          "Put it in the toaster",
+          "Spread butter on top",
+          "Enjoy the toast"
+        ]
       }
     }
   },
@@ -325,53 +361,165 @@
     "questions": {
       "q1": {
         "prompt": "Before smartphones, what did people often use to take photographs?",
-        "options": ["A film camera", "A tablet", "A smartwatch"]
+        "options": [
+          "A film camera",
+          "A tablet",
+          "A smartwatch"
+        ]
       },
       "q2": {
         "prompt": "What did many families gather around to listen to music or the news long ago?",
-        "options": ["A radio", "A laptop", "A gaming console"]
+        "options": [
+          "A radio",
+          "A laptop",
+          "A gaming console"
+        ]
       },
       "q3": {
         "prompt": "Before streaming, how did people usually listen to their favorite music at home?",
-        "options": ["A record player", "A voice assistant", "A wireless earbud"]
+        "options": [
+          "A record player",
+          "A voice assistant",
+          "A wireless earbud"
+        ]
       },
       "q4": {
         "prompt": "How did most people send a message to someone far away, long ago?",
-        "options": ["A handwritten letter", "A text message", "A video call"]
+        "options": [
+          "A handwritten letter",
+          "A text message",
+          "A video call"
+        ]
       },
       "q5": {
         "prompt": "Before mobile phones, how did people make a call away from home?",
-        "options": ["A public payphone", "A smart speaker", "A video chat app"]
+        "options": [
+          "A public payphone",
+          "A smart speaker",
+          "A video chat app"
+        ]
       },
       "q6": {
         "prompt": "What did people often use to keep food cool before electric refrigerators were common?",
-        "options": ["An icebox", "A microwave", "A freezer drawer"]
+        "options": [
+          "An icebox",
+          "A microwave",
+          "A freezer drawer"
+        ]
       },
       "q7": {
         "prompt": "How did people usually watch their favorite shows long ago?",
-        "options": ["A black-and-white television", "A tablet", "A smartphone"]
+        "options": [
+          "A black-and-white television",
+          "A tablet",
+          "A smartphone"
+        ]
       },
       "q8": {
         "prompt": "What did people often ride to get around town before cars were common?",
-        "options": ["A horse and carriage", "An electric scooter", "A rideshare car"]
+        "options": [
+          "A horse and carriage",
+          "An electric scooter",
+          "A rideshare car"
+        ]
       }
     }
   },
   "wordPuzzle": {
     "pageTitle": "Word Puzzle",
-    "crossingNote": "This letter came from your last word!",
+    "crossingNote": "Some letters are already filled in from earlier words!",
     "puzzles": {
       "p1": {
-        "wordA": "SUN", "shareIndexA": 2, "clueA": "It lights up the sky", "emojiA": "☀️",
-        "wordB": "NET", "shareIndexB": 0, "clueB": "You use it to catch fish", "emojiB": "🥅"
+        "words": [
+          {
+            "word": "SUN",
+            "clue": "It lights up the sky",
+            "emoji": "☀️",
+            "row": 0,
+            "col": 0,
+            "direction": "across"
+          },
+          {
+            "word": "SEA",
+            "clue": "Big blue water you swim in",
+            "emoji": "🌊",
+            "row": 0,
+            "col": 0,
+            "direction": "down"
+          },
+          {
+            "word": "NET",
+            "clue": "You use it to catch fish",
+            "emoji": "🥅",
+            "row": 0,
+            "col": 2,
+            "direction": "down"
+          },
+          {
+            "word": "ANT",
+            "clue": "A tiny bug that lives in a hill",
+            "emoji": "🐜",
+            "row": 2,
+            "col": 0,
+            "direction": "across"
+          }
+        ]
       },
       "p2": {
-        "wordA": "CAT", "shareIndexA": 1, "clueA": "A pet that says meow", "emojiA": "🐱",
-        "wordB": "HAT", "shareIndexB": 1, "clueB": "You wear it on your head", "emojiB": "🎩"
+        "words": [
+          {
+            "word": "CAT",
+            "clue": "A pet that says meow",
+            "emoji": "🐱",
+            "row": 0,
+            "col": 0,
+            "direction": "across"
+          },
+          {
+            "word": "COW",
+            "clue": "A farm animal that gives milk",
+            "emoji": "🐄",
+            "row": 0,
+            "col": 0,
+            "direction": "down"
+          },
+          {
+            "word": "TEA",
+            "clue": "A warm drink in a cup",
+            "emoji": "☕",
+            "row": 0,
+            "col": 2,
+            "direction": "down"
+          }
+        ]
       },
       "p3": {
-        "wordA": "DOG", "shareIndexA": 1, "clueA": "A pet that barks", "emojiA": "🐶",
-        "wordB": "SOAP", "shareIndexB": 1, "clueB": "You use it to wash your hands", "emojiB": "🧼"
+        "words": [
+          {
+            "word": "DOG",
+            "clue": "A pet that barks",
+            "emoji": "🐶",
+            "row": 0,
+            "col": 0,
+            "direction": "across"
+          },
+          {
+            "word": "DIG",
+            "clue": "What dogs love to do in the yard",
+            "emoji": "🐾",
+            "row": 0,
+            "col": 0,
+            "direction": "down"
+          },
+          {
+            "word": "GEL",
+            "clue": "A soapy gel for washing",
+            "emoji": "🧴",
+            "row": 0,
+            "col": 2,
+            "direction": "down"
+          }
+        ]
       }
     }
   }
