@@ -226,7 +226,8 @@
       "naming": "Comment Ça S'appelle",
       "oddOneOut": "L'Intrus",
       "trivia": "Souvenirs d'Autrefois",
-      "wordPuzzle": "Mots Croisés"
+      "wordPuzzle": "Mots Croisés",
+      "movement": "Bougez et Étirez-vous"
     }
   },
   "settings": {
@@ -512,6 +513,66 @@
             "direction": "down"
           }
         ]
+      }
+    }
+  },
+  "movement": {
+    "navTitle": "Bougez et Étirez-vous",
+    "navSub": "Quelques minutes tranquilles",
+    "pageTitle": "Bougez et Étirez-vous",
+    "introTitle": "Bougeons un peu",
+    "disclaimer": "Ce sont des mouvements doux, assis — ce n'est pas un avis médical. Arrêtez si quelque chose fait mal, et restez près de quelqu'un si vous vous sentez instable.",
+    "startButton": "Commencer",
+    "activities": {
+      "shoulderRolls": "Faites rouler vos épaules vers le haut, l'arrière, puis le bas, tout doucement.",
+      "seatedMarch": "Levez un genou, puis l'autre, comme pour marcher assis.",
+      "armRaises": "Levez doucement les deux bras au-dessus de la tête, puis abaissez-les.",
+      "neckStretch": "Penchez doucement la tête vers une épaule, puis vers l'autre.",
+      "handSqueeze": "Fermez doucement les mains en poings, puis ouvrez-les bien grand.",
+      "deepBreath": "Prenez une respiration lente et profonde, puis relâchez-la doucement.",
+      "ankleCircles": "Levez un pied et dessinez de lents cercles dans l'air avec les orteils.",
+      "torsoTwist": "Assis bien droit, tournez doucement les épaules d'un côté, puis de l'autre."
+    },
+    "nextButton": "Mouvement Suivant",
+    "finishButton": "Terminé"
+  },
+  "caregiverTips": {
+    "navTitle": "Conseils pour les Aidants",
+    "navSub": "Des repères pour l'instant présent",
+    "pageTitle": "Conseils pour les Aidants",
+    "intro": "Des repères généraux pour les moments du quotidien — cela ne remplace pas un avis médical. Chaque personne est différente, gardez ce qui vous convient.",
+    "tryLabel": "Essayez",
+    "insteadLabel": "Plutôt que",
+    "scenarios": {
+      "repetition": {
+        "title": "Quand elle pose encore la même question",
+        "try": "Répondez calmement, comme si c'était la première fois. Un petit mot écrit à proximité peut aussi aider.",
+        "avoid": "Dire \"je te l'ai déjà dit\" — cela peut sembler être un reproche, même si elle ne se souvient pas pourquoi."
+      },
+      "timeConfusion": {
+        "title": "Quand elle semble confuse sur l'heure ou le lieu",
+        "try": "Mentionnez doucement le jour, l'heure, ou ce qui va suivre, d'un ton calme et naturel.",
+        "avoid": "La tester pour voir ce dont elle se souvient — cela peut ressembler à un examen."
+      },
+      "agitation": {
+        "title": "Quand elle semble contrariée ou agitée",
+        "try": "Baissez la voix, ralentissez, et vérifiez si elle est fatiguée, affamée ou mal à l'aise.",
+        "avoid": "Discuter ou élever la voix — cela aide rarement et peut aggraver la détresse."
+      },
+      "notRecognizing": {
+        "title": "Quand elle ne vous reconnaît pas",
+        "try": "Présentez-vous doucement par votre nom et votre lien avec elle, sans montrer de peine.",
+        "avoid": "Demander \"tu ne sais pas qui je suis ?\" — cela peut causer de la honte ou de la peur."
+      },
+      "sundowning": {
+        "title": "Agitation en fin d'après-midi",
+        "try": "Gardez les fins d'après-midi calmes et bien éclairées ; une routine simple aide face à la confusion.",
+        "avoid": "Introduire de nouvelles tâches ou des visites tard dans la journée, quand elle est le plus fatiguée."
+      },
+      "refusingHelp": {
+        "title": "Quand elle refuse de l'aide pour les tâches du quotidien",
+        "try": "Proposez un choix simple (\"cette chemise ou celle-là ?\") plutôt qu'un ordre.",
+        "avoid": "Insister ou se presser — cela peut lui donner l'impression de perdre le contrôle."
       }
     }
   }

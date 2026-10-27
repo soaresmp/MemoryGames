@@ -114,3 +114,32 @@ export const PATTERN_PADS: PatternPad[] = [
  * are inherently language-specific (translations don't share spelling).
  */
 export const WORD_PUZZLE_KEYS = ['p1', 'p2', 'p3']
+
+export interface MovementActivity {
+  key: string
+  emoji: string
+}
+
+/** Seated, low-fall-risk movements only — instruction text lives in movement.activities.<key> per locale. */
+export const MOVEMENT_ACTIVITIES: MovementActivity[] = [
+  { key: 'shoulderRolls', emoji: '🧘' },
+  { key: 'seatedMarch', emoji: '🚶' },
+  { key: 'armRaises', emoji: '🙌' },
+  { key: 'neckStretch', emoji: '🙆' },
+  { key: 'handSqueeze', emoji: '✊' },
+  { key: 'deepBreath', emoji: '🌬️' },
+  { key: 'ankleCircles', emoji: '🦶' },
+  { key: 'torsoTwist', emoji: '🔄' },
+]
+
+/** Translation keys only — title/try/avoid text lives in caregiverTips.scenarios.<key> per locale. */
+export const CAREGIVER_TIP_KEYS = ['repetition', 'timeConfusion', 'agitation', 'notRecognizing', 'sundowning', 'refusingHelp']
+
+export const CAREGIVER_TIP_EMOJIS: Record<string, string> = {
+  repetition: '🔁',
+  timeConfusion: '🕰️',
+  agitation: '😟',
+  notRecognizing: '🫂',
+  sundowning: '🌇',
+  refusingHelp: '🙅',
+}

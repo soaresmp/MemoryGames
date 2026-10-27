@@ -11,10 +11,12 @@ import NamingExercise from './pages/exercises/NamingExercise'
 import OddOneOutExercise from './pages/exercises/OddOneOutExercise'
 import TriviaExercise from './pages/exercises/TriviaExercise'
 import WordPuzzleExercise from './pages/exercises/WordPuzzleExercise'
+import MovementExercise from './pages/exercises/MovementExercise'
 import Reminiscence from './pages/Reminiscence'
 import Progress from './pages/Progress'
 import CaregiverSettings from './pages/CaregiverSettings'
 import Checkin from './pages/Checkin'
+import CaregiverTips from './pages/CaregiverTips'
 
 export default function App() {
   return (
@@ -32,10 +34,12 @@ export default function App() {
       <Route path="/exercises/odd-one-out" element={<OddOneOutExercise />} />
       <Route path="/exercises/trivia" element={<TriviaExercise />} />
       <Route path="/exercises/word-puzzle" element={<WordPuzzleExercise />} />
+      <Route path="/exercises/movement" element={<MovementExercise />} />
       <Route path="/reminisce" element={<Reminiscence />} />
       <Route path="/progress" element={<Progress />} />
       <Route path="/settings" element={<CaregiverSettings />} />
       <Route path="/checkin" element={<Checkin />} />
+      <Route path="/caregiver-tips" element={<CaregiverTips />} />
     </Routes>
   )
 }

@@ -226,7 +226,8 @@
       "naming": "Name This",
       "oddOneOut": "Odd One Out",
       "trivia": "Blast From the Past",
-      "wordPuzzle": "Word Puzzle"
+      "wordPuzzle": "Word Puzzle",
+      "movement": "Move & Stretch"
     }
   },
   "settings": {
@@ -520,6 +521,66 @@
             "direction": "down"
           }
         ]
+      }
+    }
+  },
+  "movement": {
+    "navTitle": "Move & Stretch",
+    "navSub": "A few gentle minutes",
+    "pageTitle": "Move & Stretch",
+    "introTitle": "Let's move a little",
+    "disclaimer": "These are gentle seated movements, not medical advice. Stop if anything hurts, and have someone nearby if you feel unsteady.",
+    "startButton": "Start",
+    "activities": {
+      "shoulderRolls": "Roll your shoulders up, back, and down, nice and slow.",
+      "seatedMarch": "Lift one knee, then the other, like marching in your chair.",
+      "armRaises": "Raise both arms slowly above your head, then lower them.",
+      "neckStretch": "Gently tilt your head toward one shoulder, then the other.",
+      "handSqueeze": "Squeeze your hands into soft fists, then open them wide.",
+      "deepBreath": "Take a slow, deep breath in, then let it out slowly.",
+      "ankleCircles": "Lift one foot and draw slow circles in the air with your toes.",
+      "torsoTwist": "Sitting tall, gently twist your shoulders to one side, then the other."
+    },
+    "nextButton": "Next Movement",
+    "finishButton": "All Done"
+  },
+  "caregiverTips": {
+    "navTitle": "Caregiver Tips",
+    "navSub": "In-the-moment guidance",
+    "pageTitle": "Caregiver Tips",
+    "intro": "General guidance for common moments — not a substitute for medical advice. Every person is different, so use what fits.",
+    "tryLabel": "Try",
+    "insteadLabel": "Instead of",
+    "scenarios": {
+      "repetition": {
+        "title": "When they ask the same question again",
+        "try": "Answer calmly, as if it's the first time. A written note nearby can help too.",
+        "avoid": "Saying \"I already told you\" — it can feel like criticism, even if they don't remember why."
+      },
+      "timeConfusion": {
+        "title": "When they seem confused about time or place",
+        "try": "Gently mention the day, time, or what's coming up next, in a calm, matter-of-fact way.",
+        "avoid": "Quizzing them to \"test\" what they remember — it can feel like an exam."
+      },
+      "agitation": {
+        "title": "When they seem upset or agitated",
+        "try": "Lower your voice, slow down, and check if they're tired, hungry, or uncomfortable.",
+        "avoid": "Arguing or raising your voice — it rarely helps and can increase distress."
+      },
+      "notRecognizing": {
+        "title": "When they don't recognize you",
+        "try": "Introduce yourself gently by name and relationship, without sounding hurt.",
+        "avoid": "Asking \"Don't you know who I am?\" — it can cause shame or fear."
+      },
+      "sundowning": {
+        "title": "Late-afternoon restlessness (sundowning)",
+        "try": "Keep afternoons calm and well-lit; a simple routine helps as daylight fades.",
+        "avoid": "Introducing new tasks or visitors late in the day, when they're most tired."
+      },
+      "refusingHelp": {
+        "title": "When they refuse help with everyday tasks",
+        "try": "Offer a simple choice (\"this shirt or that one?\") instead of a command.",
+        "avoid": "Insisting or rushing — it can feel like a loss of control for them."
       }
     }
   }

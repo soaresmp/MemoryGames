@@ -27,6 +27,8 @@ cognitive-rehabilitation literature, not a generic "brain game":
 | **Blast From the Past** (nostalgia trivia) | Leverages the **reminiscence bump** — autobiographical memories from adolescence/early adulthood stay disproportionately accessible in dementia — with always-gettable, positively-framed multiple-choice questions about pre-digital daily life, as a lighter-touch counterpart to *Memory Lane*'s open-ended prompts. |
 | **Word Puzzle** (crossword-inspired spelling) | A randomized-controlled trial found crossword puzzles held cognitive performance in amnestic MCI as well as or better than a computerized cognitive-training app, with less brain atrophy on MRI over 78 weeks (Devanand et al., *NEJM Evidence*, 2022). Adapted here as tap-tile letter spelling (no free typing): early stage solves a real multi-word crossword grid, one word at a time, where letters already solved in earlier crossing words are pre-filled; middle stage keeps a single word with no crossing, to limit decisions per screen. |
 | **Cognitive Check-in** (clock-setting, delayed word recall, attention task, caregiver questionnaire) | Inspired by the cognitive domains real screening tools assess — the **Clock Drawing Test** / Mini-Cog (visuospatial/executive function), **MMSE/MoCA**-style delayed recall and serial-subtraction attention tasks, and the caregiver-interview domains behind staging tools like the **GDS** and **CDR** — without reproducing any of those copyrighted instruments verbatim. Deliberately outputs *no numeric score or stage claim*, only banded plain-language observations ("no / some / considerable difficulty observed") explicitly framed as a doctor-visit conversation starter, never a diagnosis. |
+| **Move & Stretch** (seated gentle movement) | Physical activity has some of the strongest evidence of anything in dementia care for supporting cognition and daily function (Livingston et al., *Lancet Commission on dementia prevention, intervention, and care*, 2020). Kept deliberately low-risk: seated-only movements, no step-based or standing exercises, with a plain disclaimer to stop if anything hurts and to have someone nearby if unsteady — this is a wellbeing nudge, not a physiotherapy program. |
+| **Caregiver Tips** | Addresses communication strategies caregiver-education programs consistently teach — responding to repeated questions, not correcting a person's sense of time/place head-on, de-escalating agitation, and managing sundowning — drawn from **validation therapy** (Feil) and general dementia-caregiver-communication guidance, framed as "try this / not that" rather than clinical instruction. |
 
 ## Exercises
 
@@ -40,6 +42,7 @@ cognitive-rehabilitation literature, not a generic "brain game":
 - **Odd One Out** — one wrong-category item among four; tap the one that doesn't belong (categorical reasoning).
 - **Blast From the Past** — always-answerable nostalgia trivia about pre-digital daily life (reminiscence bump).
 - **Word Puzzle** — spell clued words one at a time by tapping letter tiles, building up a real multi-word crossword grid where later words reuse letters already solved (crossword-inspired, no free typing); middle stage stays a single word with no crossing.
+- **Move & Stretch** — a short sequence of gentle, seated-only movements (not scored — every session just logs as completed).
 - **Memory Lane** — themed reminiscence prompts for a caregiver-assisted conversation.
 
 ## Cognitive Check-in
@@ -70,6 +73,10 @@ the interactive clock.
 - Choose which reminiscence topics appear in *Memory Lane*.
 - Adjust text size and toggle a high-contrast theme.
 - View a day-streak, weekly session count, and a plain-language activity log.
+- **Caregiver Tips** (`/caregiver-tips`) — a short, static library of "try this / instead of that"
+  guidance for common day-to-day moments (repeated questions, time/place confusion, agitation,
+  not being recognized, sundowning, refusing help). Informational only, not an exercise — nothing
+  here is logged or scored.
 
 ## Language support
 
@@ -94,8 +101,8 @@ npm run build      # production build to dist/
 - `src/lib/storage.ts` — `localStorage`-backed profile persistence.
 - `src/lib/spacedRetrieval.ts` — expanding-interval scheduling for *Faces I Know*.
 - `src/lib/difficulty.ts` — per-stage difficulty table consumed by every exercise.
-- `src/pages/exercises/*` — the ten exercises; `src/pages/Reminiscence.tsx` and the caregiver
-  pages (`Progress.tsx`, `CaregiverSettings.tsx`) round out the app.
+- `src/pages/exercises/*` — the eleven exercises; `src/pages/Reminiscence.tsx` and the caregiver
+  pages (`Progress.tsx`, `CaregiverSettings.tsx`, `CaregiverTips.tsx`) round out the app.
 - `src/i18n/` — `i18next` config plus `locales/{en,pt-BR,es,fr}.json`. All exercise content
   (categories, routine steps, reminiscence themes) is keyed, not hardcoded English, so it
   translates along with the UI chrome.

@@ -226,7 +226,8 @@
       "naming": "Como se Chama",
       "oddOneOut": "O Diferente",
       "trivia": "Lá do Passado",
-      "wordPuzzle": "Palavras Cruzadas"
+      "wordPuzzle": "Palavras Cruzadas",
+      "movement": "Mexa-se e Alongue-se"
     }
   },
   "settings": {
@@ -512,6 +513,66 @@
             "direction": "down"
           }
         ]
+      }
+    }
+  },
+  "movement": {
+    "navTitle": "Mexa-se e Alongue-se",
+    "navSub": "Alguns minutinhos tranquilos",
+    "pageTitle": "Mexa-se e Alongue-se",
+    "introTitle": "Vamos nos mexer um pouco",
+    "disclaimer": "São movimentos suaves, feitos sentado — não é orientação médica. Pare se sentir dor, e peça para alguém ficar por perto se não se sentir firme.",
+    "startButton": "Começar",
+    "activities": {
+      "shoulderRolls": "Gire os ombros para cima, para trás e para baixo, bem devagar.",
+      "seatedMarch": "Levante um joelho, depois o outro, como se estivesse marchando sentado.",
+      "armRaises": "Levante os dois braços devagar acima da cabeça, depois abaixe-os.",
+      "neckStretch": "Incline a cabeça suavemente para um ombro, depois para o outro.",
+      "handSqueeze": "Feche as mãos suavemente, depois abra-as bem.",
+      "deepBreath": "Respire fundo e devagar, depois solte o ar lentamente.",
+      "ankleCircles": "Levante um pé e faça círculos devagar no ar com os dedos.",
+      "torsoTwist": "Sentado(a) ereto(a), gire suavemente os ombros para um lado, depois para o outro."
+    },
+    "nextButton": "Próximo Movimento",
+    "finishButton": "Terminei"
+  },
+  "caregiverTips": {
+    "navTitle": "Dicas para Cuidadores",
+    "navSub": "Orientação para o dia a dia",
+    "pageTitle": "Dicas para Cuidadores",
+    "intro": "Orientações gerais para momentos comuns — não substituem a orientação médica. Cada pessoa é diferente, use o que fizer sentido.",
+    "tryLabel": "Tente",
+    "insteadLabel": "Em vez de",
+    "scenarios": {
+      "repetition": {
+        "title": "Quando ele(a) faz a mesma pergunta de novo",
+        "try": "Responda com calma, como se fosse a primeira vez. Um bilhete por perto também pode ajudar.",
+        "avoid": "Dizer \"eu já te falei isso\" — pode soar como crítica, mesmo que ele(a) não se lembre do motivo."
+      },
+      "timeConfusion": {
+        "title": "Quando ele(a) parece confuso(a) sobre o tempo ou o lugar",
+        "try": "Mencione com calma o dia, a hora, ou o que vem a seguir, de forma tranquila.",
+        "avoid": "Testar a memória dele(a) de propósito — pode parecer uma prova."
+      },
+      "agitation": {
+        "title": "Quando ele(a) parece agitado(a) ou chateado(a)",
+        "try": "Fale mais baixo, devagar, e veja se ele(a) está cansado(a), com fome ou desconfortável.",
+        "avoid": "Discutir ou levantar a voz — raramente ajuda e pode piorar a situação."
+      },
+      "notRecognizing": {
+        "title": "Quando ele(a) não reconhece você",
+        "try": "Apresente-se com calma pelo nome e pelo laço familiar, sem demonstrar mágoa.",
+        "avoid": "Perguntar \"você não sabe quem eu sou?\" — isso pode causar vergonha ou medo."
+      },
+      "sundowning": {
+        "title": "Agitação no fim da tarde (pôr do sol)",
+        "try": "Mantenha o fim da tarde calmo e bem iluminado; uma rotina simples ajuda com a confusão.",
+        "avoid": "Introduzir tarefas novas ou visitas no fim do dia, quando ele(a) está mais cansado(a)."
+      },
+      "refusingHelp": {
+        "title": "Quando ele(a) recusa ajuda nas tarefas do dia a dia",
+        "try": "Ofereça uma escolha simples (\"esta camisa ou aquela?\") em vez de uma ordem.",
+        "avoid": "Insistir ou apressar — pode parecer uma perda de controle para ele(a)."
       }
     }
   }

@@ -41,11 +41,19 @@ export default function Home() {
         <BigButton to="/today" emoji="🗓️" label={t('home.todayTitle')} sublabel={t('home.todaySub')} tone="teal" />
         <BigButton to="/exercises" emoji="🧠" label={t('home.exercisesTitle')} sublabel={t('home.exercisesSub')} />
         <BigButton to="/reminisce" emoji="📷" label={t('home.reminisceTitle')} sublabel={t('home.reminisceSub')} tone="teal" />
+        <BigButton to="/exercises/movement" emoji="🧘" label={t('movement.navTitle')} sublabel={t('movement.navSub')} />
       </div>
 
       <div className="flex flex-col gap-3 border-t-2 border-ink/10 pt-6">
         <p className="text-center text-lg opacity-70">{t('home.forFamily')}</p>
         <BigButton to="/checkin" emoji="🩺" label={t('checkin.navTitle')} sublabel={t('checkin.navSub')} />
+        <BigButton
+          to="/caregiver-tips"
+          emoji="💬"
+          label={t('caregiverTips.navTitle')}
+          sublabel={t('caregiverTips.navSub')}
+          tone="teal"
+        />
         <div className="flex flex-col gap-3 sm:flex-row">
           <div className="flex-1">
             <BigButton to="/progress" emoji="📈" label={t('home.progressTitle')} sublabel={t('home.progressSub')} tone="teal" />

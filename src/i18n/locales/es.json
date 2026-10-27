@@ -226,7 +226,8 @@
       "naming": "Cómo se Llama",
       "oddOneOut": "El Diferente",
       "trivia": "Recuerdos del Pasado",
-      "wordPuzzle": "Palabras Cruzadas"
+      "wordPuzzle": "Palabras Cruzadas",
+      "movement": "Muévete y Estírate"
     }
   },
   "settings": {
@@ -512,6 +513,66 @@
             "direction": "down"
           }
         ]
+      }
+    }
+  },
+  "movement": {
+    "navTitle": "Muévete y Estírate",
+    "navSub": "Unos minutos tranquilos",
+    "pageTitle": "Muévete y Estírate",
+    "introTitle": "Vamos a movernos un poco",
+    "disclaimer": "Son movimientos suaves, sentado — no es un consejo médico. Deténgase si algo duele, y tenga a alguien cerca si se siente inestable.",
+    "startButton": "Comenzar",
+    "activities": {
+      "shoulderRolls": "Gire los hombros hacia arriba, atrás y abajo, muy despacio.",
+      "seatedMarch": "Levante una rodilla, luego la otra, como si marchara sentado.",
+      "armRaises": "Levante ambos brazos despacio por encima de la cabeza, luego bájelos.",
+      "neckStretch": "Incline suavemente la cabeza hacia un hombro, luego hacia el otro.",
+      "handSqueeze": "Cierre las manos suavemente en puños, luego ábralas bien.",
+      "deepBreath": "Tome un respiro lento y profundo, luego suéltelo despacio.",
+      "ankleCircles": "Levante un pie y haga círculos lentos en el aire con los dedos.",
+      "torsoTwist": "Sentado derecho, gire suavemente los hombros hacia un lado, luego hacia el otro."
+    },
+    "nextButton": "Siguiente Movimiento",
+    "finishButton": "Terminado"
+  },
+  "caregiverTips": {
+    "navTitle": "Consejos para Cuidadores",
+    "navSub": "Orientación para el momento",
+    "pageTitle": "Consejos para Cuidadores",
+    "intro": "Orientación general para momentos comunes — no sustituye el consejo médico. Cada persona es diferente, use lo que le funcione.",
+    "tryLabel": "Intente",
+    "insteadLabel": "En lugar de",
+    "scenarios": {
+      "repetition": {
+        "title": "Cuando hace la misma pregunta otra vez",
+        "try": "Responda con calma, como si fuera la primera vez. Una nota escrita cerca también puede ayudar.",
+        "avoid": "Decir \"ya te lo dije\" — puede sentirse como una crítica, aunque no recuerde por qué."
+      },
+      "timeConfusion": {
+        "title": "Cuando parece confundido sobre la hora o el lugar",
+        "try": "Mencione con calma el día, la hora, o lo que viene después, de forma tranquila.",
+        "avoid": "Ponerlo a prueba para ver qué recuerda — puede sentirse como un examen."
+      },
+      "agitation": {
+        "title": "Cuando parece molesto o agitado",
+        "try": "Baje la voz, vaya despacio, y vea si tiene sueño, hambre o está incómodo.",
+        "avoid": "Discutir o levantar la voz — rara vez ayuda y puede aumentar la angustia."
+      },
+      "notRecognizing": {
+        "title": "Cuando no lo reconoce a usted",
+        "try": "Preséntese con calma por su nombre y su relación, sin sonar dolido.",
+        "avoid": "Preguntar \"¿no sabes quién soy?\" — puede causar vergüenza o miedo."
+      },
+      "sundowning": {
+        "title": "Inquietud al final de la tarde",
+        "try": "Mantenga las tardes tranquilas y bien iluminadas; una rutina simple ayuda con la confusión.",
+        "avoid": "Introducir tareas nuevas o visitas al final del día, cuando está más cansado."
+      },
+      "refusingHelp": {
+        "title": "Cuando rechaza ayuda con las tareas diarias",
+        "try": "Ofrezca una opción simple (\"¿esta camisa o aquella?\") en lugar de una orden.",
+        "avoid": "Insistir o apurarlo — puede sentirse como una pérdida de control para él."
       }
     }
   }

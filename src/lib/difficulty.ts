@@ -26,6 +26,7 @@ export interface StageConfig {
   oddOneOut: { trialCount: number }
   trivia: { questionCount: number; choiceCount: number }
   wordPuzzle: { puzzleCount: number; showCrossing: boolean }
+  movement: { stepCount: number }
 }
 
 export const STAGE_CONFIG: Record<Stage, StageConfig> = {
@@ -42,6 +43,7 @@ export const STAGE_CONFIG: Record<Stage, StageConfig> = {
     oddOneOut: { trialCount: 5 },
     trivia: { questionCount: 5, choiceCount: 3 },
     wordPuzzle: { puzzleCount: 3, showCrossing: true },
+    movement: { stepCount: 5 },
   },
   medium: {
     matchPairs: { pairCount: 4, revealMs: 1700, columns: 3 },
@@ -56,5 +58,6 @@ export const STAGE_CONFIG: Record<Stage, StageConfig> = {
     oddOneOut: { trialCount: 3 },
     trivia: { questionCount: 3, choiceCount: 2 },
     wordPuzzle: { puzzleCount: 2, showCrossing: false },
+    movement: { stepCount: 3 },
   },
 }
